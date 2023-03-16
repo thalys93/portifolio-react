@@ -6,5 +6,4 @@
  - 🟨 Banco de dados **MySQL**
  
  
- **Em fase de DESENVOLVIMENTO**
- 
+ **Em fase de DESENVOLVIMENTO** 
