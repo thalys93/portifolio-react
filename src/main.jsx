@@ -2,13 +2,16 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// Import de Estilos Globais
-import './global.css'
+// Import do Router
+import Routes from './Routes/routes'
 
+// Import de Estilos Globais
+import './css/global.css'
+import './css/fonts.css'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    
+    <Routes/>
   </React.StrictMode>,
 )
