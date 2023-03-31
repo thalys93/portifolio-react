@@ -1,0 +1,42 @@
+
+
+#navUL{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    user-select: none;
+
+    margin-right: 25pt;
+    margin-top: 15pt;
+    margin-bottom: 5pt;
+    
+    list-style: none;
+
+        
+}
+
+#HomeDiv{
+    display: flex;
+    flex-direction: row;    
+}
+
+.href{    
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13pt;
+    
+    margin-right: 5pt;
+}
+
+.href span:hover{
+    color: #36ffe4;    
+}
+
+#LinksDiv{
+    display: flex;
+    flex-direction: row;
+        
+}
+

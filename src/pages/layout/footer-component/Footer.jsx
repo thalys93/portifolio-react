@@ -1,9 +1,12 @@
 import React from 'react'
+import './footer.css'
 
 function Footer() {
   return (
     <footer>
-      <h1> Teste Footer </h1>
+      <div className="fotDetail">
+      <span> Copyright © Thalys 2023 </span>
+      </div>
     </footer>
   )
 }

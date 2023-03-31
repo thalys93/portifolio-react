@@ -1,0 +1,78 @@
+.AuthorName{    
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; 
+    font-size: 15pt;   
+    margin: 5pt;    
+}
+
+#perfFig{    
+    display: flex;
+    flex-direction: column;        
+    justify-content: center;
+    align-items: center;    
+}
+
+#perfFig > img {
+    width: 150pt;
+    height: 150pt;
+    object-fit: cover;
+
+    border-radius: 150pt;
+}
+
+#FigureDiv{
+    display: flex;
+    flex-direction: column;  
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
+#FigureDiv h2{
+    user-select: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;         
+}
+
+#iconsDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;    
+    align-items: center;  
+    
+    margin-top: 15pt;
+}
+
+#icon{
+    height: 80pt;
+}
+
+#icon:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.2s;
+    
+}
+
+
+#iconDetails{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+
+    padding-left: 10pt;
+    padding-right: 10pt;    
+
+    scale: 0.8;
+}
+
+#iconDetails span{
+    font-size: 15pt;
+    user-select: none;
+}
+
+.HomeSection{
+    margin-top: 70pt;
+}

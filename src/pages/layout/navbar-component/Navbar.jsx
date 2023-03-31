@@ -1,9 +1,13 @@
 import React from 'react'
 
+import Barra from "./Barra"
+import Hamburger from './Hamburger'
+
 function Navbar() {
   return (
     <navbar>
-      <h1> Teste Navbar </h1>
+      <Barra id="CommonBar"/>      
+      {/* <Hamburger id="burgerMenu"/> */}
     </navbar>
   )
 }
