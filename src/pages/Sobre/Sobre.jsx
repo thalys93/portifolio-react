@@ -16,12 +16,15 @@ function Sobre() {
       </div>
 
       <div className='TxtDiv'>
-        <p> Nascido em Lugar Tal sobre Tal Informação <br/>
-        Eu já Fiz Tais Coisas, de Forma Assincrona <br/> 
-        Criando Descrição para Definir a Persona <br/>
-        e Assim Gerar um Resultado Definido Sobre <br/>
-        e Terminar falando da motivação por ter criado um portifólio
-        </p>
+        <p> Eu Sou um desenvolvedor Front-end com conhecimento </p>
+        <p> avançado em Html e Tecnologias como React, Angular </p>
+        <p> Especialista em desenvolvimento de aplicações web responsivas e interativas</p>
+        <p> Como Desenvolvedor do Ecommerce de fios Dabruatelie, estou constantemente Aprimorando</p>
+        <p> a Plataforma e trabalhando no desenvolvimento de novos recursos, bem como</p>
+        <p> Criando um portifólio para mostrar minhas habilidades e contribuições</p>
+        <p> para projetos Futuros. sou capaz de oferecer soluções criativas e eficazes para problemas complexos de desenvolvimento web</p> 
+
+
       </div>
     </section>
   )

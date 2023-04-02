@@ -30,8 +30,12 @@
     margin-right: 5pt;
 }
 
+.href{
+    color: aliceblue;
+}
+
 .href span:hover{
-    color: #36ffe4;    
+    color: #364aff;    
 }
 
 #LinksDiv{

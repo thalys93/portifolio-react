@@ -40,18 +40,58 @@
     justify-content: center;    
     align-items: center;  
     
+    
     margin-top: 15pt;
 }
 
-#icon{
-    height: 80pt;
+.icon{
+    font-size: 50pt;       
 }
 
-#icon:hover{
+.icon:hover{
     cursor: pointer;
     transform: scale(1.1);
-    transition: 0.2s;
-    
+    transition: 0.2s;    
+}
+
+.Html{
+    color: aliceblue;
+}
+
+.Html:hover{
+    color: #E34F26;
+}
+
+.Css{
+    color: aliceblue;
+}
+
+.Css:hover{
+    color: #1572B6;
+}
+
+.Javascript{
+    color: aliceblue;
+}
+
+.Javascript:hover{
+    color: #F7DF1E;
+}
+
+.React{
+    color: aliceblue;
+}
+
+.React:hover{
+    color: #61DAFB;    
+}
+
+.Angular{
+    color: aliceblue;
+}
+
+.Angular:hover{
+    color: #DD0031;
 }
 
 
@@ -60,7 +100,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    text-decoration: none;     
 
     padding-left: 10pt;
     padding-right: 10pt;    
@@ -74,5 +114,5 @@
 }
 
 .HomeSection{
-    margin-top: 70pt;
+    margin-top: 70pt;    
 }
