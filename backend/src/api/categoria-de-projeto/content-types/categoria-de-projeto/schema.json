@@ -1,0 +1,18 @@
+{
+  "kind": "collectionType",
+  "collectionName": "categoria_de_projetos",
+  "info": {
+    "singularName": "categoria-de-projeto",
+    "pluralName": "categoria-de-projetos",
+    "displayName": "Categoria de projeto"
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "tipo": {
+      "type": "string"
+    }
+  }
+}
