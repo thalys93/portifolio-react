@@ -4,8 +4,8 @@
     flex-direction: column;
 }
 
-#expObj{
-    list-style-type: decimal;        
+#expObj{        
+    list-style-type: none;
 }
 
 #expTitle{
@@ -19,4 +19,11 @@
     flex-direction: row;
 
     gap: 5pt;
+}
+
+#expIcon{
+    display: flex;    
+    justify-content: start;
+    align-items: start;
+    margin-top: 5pt;
 }

@@ -1,0 +1,25 @@
+
+#pjList{    
+    display: flex;
+    flex-direction: column;
+
+    list-style: none;
+}
+
+#pjCard{       
+    border: solid aliceblue 1pt;
+    padding: 5pt;
+}
+
+#pjTitle{
+    display: flex;
+    flex-direction: row;
+    gap: 25pt;
+}
+
+#pjDetails{
+    display: flex;
+    flex-direction: row;
+
+    gap: 5pt;
+}
