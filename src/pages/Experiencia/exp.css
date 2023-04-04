@@ -1,0 +1,22 @@
+
+#expList{    
+    display: flex;
+    flex-direction: column;
+}
+
+#expObj{
+    list-style-type: decimal;        
+}
+
+#expTitle{
+    display: flex;
+    flex-direction: row;
+    gap: 25pt;
+}
+
+#expDetails{
+    display: flex;
+    flex-direction: row;
+
+    gap: 5pt;
+}

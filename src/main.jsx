@@ -1,11 +1,12 @@
-// Imports do React e React DOM
+// React e React DOM
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 
-// Import do Router
+// Router
 import Routes from './Routes'
 
-// Import de Estilos Globais
+// Estilos Globais
+import 'react-tooltip/dist/react-tooltip.css'
 import 'animate.css'
 import './css/global.css'
 import './css/fonts.css'

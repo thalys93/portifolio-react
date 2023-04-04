@@ -11,7 +11,7 @@
     align-items: center;    
 
     margin-left: 80pt;    
-    margin-top: 80pt;
+    margin-top: 150pt;
 
 }
 
@@ -26,17 +26,24 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20pt;    
+    margin-bottom: 20pt;  
+    user-select: none;  
 }
 
 #TxtDiv{
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items: end;            
+    align-items: end;      
+    user-select: none;
     
     margin-left: 150pt;
     margin-right: 150pt;
+}
+
+#TxtDiv>p {
+    font-family: 'Roboto', sans-serif;    
+    font-size: 14pt;    
 }
 
 .atelie{
@@ -52,4 +59,16 @@
     display: flex;
     flex-direction: column;
     margin-top: 60pt;
+}
+
+#htmlTxt:hover{
+    color: #E34F26;    
+}
+
+#reactTxt:hover{
+    color: #61DAFB;    
+}
+
+#angularTxt:hover{
+    color: #DD0031;    
 }
