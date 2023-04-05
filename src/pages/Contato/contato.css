@@ -1,6 +1,8 @@
 #contactSection{
     display: flex;
     flex-direction: column;
+
+    margin-bottom: 280pt;
 }
 
 #allIcons{

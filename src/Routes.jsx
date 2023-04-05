@@ -10,10 +10,9 @@ import Home from './pages/Home/Home'
 import Sobre from './pages/Sobre/Sobre'
 
 import Projetos from './pages/Projetos/Projetos'
+import Projeto from './pages/Projetos/Projeto'
 
 import Contato from './pages/Contato/Contato'
-
-import Experiência from './pages/Experiencia/Experiencia'
 
 // Página de Error
 import Error from './Pages/Error/Error'
@@ -33,24 +32,25 @@ const router = createBrowserRouter([
                 {
                     path: 'Sobre',
                     element: <Sobre />
-                },
-                // Projetos
-                {
-                    path: 'Projetos',
-                    element: <Projetos />
-                },
+                },                                                                             
                 // Contato        
                 {
                     path: 'Contato',
                     element: <Contato />
-                },
-                // Experiência
-                {
-                    path: 'Experiencia',
-                    element: <Experiência />
-                }
+                },                
             ]
-        }
+        },
+
+            // Projetos
+        {
+            path: 'Projetos',
+            element: <Projetos />,
+        },
+
+        {
+            path: 'Projetos/:id/:nome'  ,
+            element: <Projeto />
+        },
     ])
 
 function Routes() {        

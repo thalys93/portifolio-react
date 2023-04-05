@@ -1,10 +1,5 @@
 import React from 'react'
 
-import Sobre from '../Sobre/Sobre'
-import Experiencia from '../Experiencia/Experiencia'
-import Projetos from '../Projetos/Projetos'
-import Contato from '../Contato/Contato'
-
 // Estilizações e Icones
 import './home.css'
 import  { FaHtml5, FaCss3Alt, FaAngular, FaReact} from 'react-icons/fa';

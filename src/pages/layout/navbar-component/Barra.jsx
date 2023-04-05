@@ -22,11 +22,6 @@ function Barra() {
             <span>Sobre Mim |</span> 
           </Link>          
         </li>            
-        <li>
-          <Link to="/experiencia" className="href">
-            <span>Experiência |</span>
-            </Link>
-        </li>
 
         <li>
           <Link to="/projetos" className="href">
