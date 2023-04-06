@@ -6,8 +6,8 @@ function LoadingCircle() {
 
     const Lstyle = {
       width: '150px',
-      height: '150px'
-    }
+      height: '150px'      
+    }    
 
   return (
     <div id="loadingDiv"> 

@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
 
-    transition: 0.15s;
-    
+    transition: 0.5s;    
 }
 
 body{
@@ -17,4 +16,4 @@ body{
 a{
     text-decoration: none;
     color: aliceblue;
-	}
+}

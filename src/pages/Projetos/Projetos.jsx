@@ -4,7 +4,6 @@ import  React from 'react'
 import Footer from '../layout/footer-component/Footer';
 
 import Navbar from '../layout/navbar-component/Navbar';
-import ProjectCardBlank from './ProjectCardBlank';
 import ProjectCard from './ProjectCard';
 
 // CSS
@@ -14,11 +13,11 @@ function Projetos() {
 
 
   return (    
-    <main id='projectMain' className='animate__animated animate_fadeIn'>
+    <main id='projectMain'>
       <Navbar />
       <section id="projectSection">
       <ol>                          
-        <ProjectCardBlank />
+        <ProjectCard />
       </ol>
       </section>
       <Footer />      

@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import { Tooltip } from "react-tooltip";
 
 import LoadingCircle from "../layout/loading-component/Loading";
 import Footer from '../layout/footer-component/Footer';
@@ -9,19 +8,17 @@ import Footer from '../layout/footer-component/Footer';
 // Icons
 import { FaGithub } from "react-icons/fa";
 
+import './PjCard.css'
+
 
 function Projeto () {
   
     const [loading, setLoading] = useState(true);
-
-
     const [Pjdata, setPjData] = useState([]);  
 
-
     const local = "http://26.79.95.70:1337"
-
     const {id} = useParams() ;
-
+    
 
     useEffect(() => {                            
         fetch(`http://26.79.95.70:1337/api/projetos/${id}?populate=*`)              
@@ -29,22 +26,25 @@ function Projeto () {
         .then(setPjData);
         setTimeout(() => {
         setLoading(false);
-        }, 1500);        
+        }, 500);        
     }, []);
         
     
     return(
-      <main className='animate__animated animate_fadeIn'>
-        <Tooltip id="exitTooltip"/>
-        <div id="exitDiv">        
-          <Link to="/projetos" id="ProjectLink">            
-            <i class="bi bi-box-arrow-left" id="exitIcon" data-tooltip-content="Voltar a Projetos?" data-tooltip-id="exitTooltip"/>            
-          </Link>        
-        </div>
+      <main className='animate__animated animate_fadeIn'>        
         
         {loading ? 
-<LoadingCircle /> : (
-      <section id="ItemSection">              
+        <section id="ItemSectionBlank">
+          <div id="ItemDivBlank">
+          <LoadingCircle />
+          </div>
+        </section> : (
+      <section id="ItemSection">
+        <div id="exitDiv">
+          <Link to="/projetos" id="exitLink" reloadDocument={true} preventScrollReset={true} > 
+                  <i className="bi bi-box-arrow-left" id="exitIcon"/> 
+            </Link>
+          </div>                       
     <h3> {Pjdata.data?.attributes.nome} </h3>
     <h5> Tipo de Projeto | {Pjdata.data?.attributes.tipo}</h5> 
       <div className="projectText">
@@ -59,7 +59,7 @@ function Projeto () {
       </div>
       </section>      
       )}
-      <Footer />  
+
       </main>      
     )
 }
