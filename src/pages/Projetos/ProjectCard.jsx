@@ -1,11 +1,12 @@
 import React, { useState , useEffect} from 'react'
 import LoadingCircle from '../layout/loading-component/Loading';
+import { Link } from 'react-router-dom';
+import { apiField, apiProjects } from '../../services/api';
 
 
 // Import do Modal
 import Pjmodal from './Pjmodal';
 
-import { Link } from 'react-router-dom';
 
 import './projects.css'
 
@@ -14,24 +15,38 @@ function ProjectCard() {
       
   // Card Vazio  
     const [emptyCard, setEmptyCard] = useState([]);
-
     useEffect(() => {
-        fetch('http://26.79.95.70:1337/api/projetos?fields[0]')
-        .then((response) => response.json())        
-        .then(setEmptyCard)             
+      const fetchEmptyData = async () => {
+        try {
+          const data = await apiField();
+          setEmptyCard(data);
+        } catch (error){
+          console.error('Falha ao buscar dados da API', error);
+        }
+      };
+      fetchEmptyData();
     }, []);   
 
-    // Buscar na Api Informações e Set Elas
-    const [loading, setLoading] = useState(true);    
-    const [Pjdata, setPjData] = useState([]);        
-    const local = "http://26.79.95.70:1337"    
+    
+    // constante para obtenção de dados para imagens
+    const local = "http://26.79.95.70:1337"   
 
-
-    useEffect(() => {                            
-    fetch('http://26.79.95.70:1337/api/projetos?populate=*')
-    .then((response) => response.json())        
-    .then(setPjData);        
-    setLoading(false);    
+    // Card Preenchido
+    const [PjData, setPjData] = useState([]);
+    const [loading, setLoading] = useState(true);      
+    useEffect(() => {  
+      const fetchData = async () => {
+        try {
+          const data = await apiProjects();
+          setPjData(data);
+        } catch (error){
+          console.error('Falha ao buscar dados da API', error);
+        }
+      };
+      fetchData();               
+    setTimeout(() => {
+      setLoading(false);          
+    }, 1000);     
     }, []);
 
 
@@ -74,24 +89,25 @@ function ProjectCard() {
       </li>
     </div>
     )) : (      
-        Pjdata.data?.map((pj,id1) => (          
-        <li id='pjCard' key={id1} className='animate__animated animate_fadeIn'>          
+        PjData.data?.map((pj) => (          
+        <li id='pjCard' key={pj.id} className='animate__animated animate_fadeIn'>          
             <div id='pjTitle'>
           <h3> Projeto : {pj.attributes.nome} </h3>           
             </div>
             <div id='pjDetails'>
-          <img src={local + pj.attributes.image.data.attributes.url } className="imgBk"/> 
-                        
-            <Link to={pj.id + '/'+ pj.attributes.nomespace + '/'} 
+          <img src={local + pj.attributes.image.data.attributes.url } className="imgBk"/>                         
+          {/* Desktop Modal */}
+            <Link to={pj.id +'/'+ pj.attributes.nomespace} 
             className='btn btn-outline-light' 
             onClick={openModal}
             preventScrollReset={true}
             >Saiba Mais sobre o {pj.attributes.nome}            
-            </Link>
-                      
-
-            <Pjmodal isOpen={modalIsOpen} onRequestClose={closeModal} onAbort={closeModal} />
-          
+            </Link>                      
+            <Pjmodal isOpen={modalIsOpen} onRequestClose={closeModal} onAbort={closeModal} />        
+          {/* Mobile Option */}          
+          <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light'>
+            Saiba Mais sobre o {pj.attributes.nome}
+          </Link>
             </div>
             <hr />
         </li>

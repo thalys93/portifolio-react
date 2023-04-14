@@ -10,6 +10,7 @@ import 'react-tooltip/dist/react-tooltip.css'
 import 'animate.css'
 import './css/global.css'
 import './css/fonts.css'
+import './css/respon.css'
 
 
 

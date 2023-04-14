@@ -65,9 +65,11 @@
 
     background-color: #444444;
     border-radius: 5pt;
+    width: 35pt;
 
-    margin-right: 550pt;
-    margin-bottom: -55pt;    
+    margin: 15pt;
+    
+    margin-bottom: -35pt;
 }
 
 #exitIcon{
@@ -78,7 +80,6 @@
 #exitIcon:hover{
     color: #364aff;    
 }
-
 
 
 #ProjectLink{

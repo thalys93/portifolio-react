@@ -1,0 +1,33 @@
+/* Desktop */
+@media only screen and (min-width: 1024px) {
+    /* Modal */
+
+    /* PjCard */
+    #ItemSection{
+        display: flex;
+        padding: 15pt;
+
+        margin-top: -50pt;
+        
+    }
+
+
+    #exitLinkD{
+        display: flex;
+    }
+
+    #exitLinkM{
+        display: none;
+    }
+
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 767px) {
+
+}

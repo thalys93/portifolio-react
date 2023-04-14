@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
 import LoadingCircle from "../layout/loading-component/Loading";
-import Footer from '../layout/footer-component/Footer';
+import { apiId } from "../../services/api";
 
 // Icons
 import { FaGithub } from "react-icons/fa";
@@ -12,18 +12,26 @@ import './PjCard.css'
 
 
 function Projeto () {
-  
+  // Nested Routes
+    const {id} = useParams() ;
+    
+  // apiID do Projeto
     const [loading, setLoading] = useState(true);
     const [Pjdata, setPjData] = useState([]);  
 
     const local = "http://26.79.95.70:1337"
-    const {id} = useParams() ;
     
 
     useEffect(() => {                            
-        fetch(`http://26.79.95.70:1337/api/projetos/${id}?populate=*`)              
-        .then((response) => response.json())        
-        .then(setPjData);
+        const fetchData = async () => {
+            try {
+                const data = await apiId(id);
+                setPjData(data);
+            } catch (error) {
+                console.error("Falha ao buscar dados da API", error);
+            }
+        };
+        fetchData();        
         setTimeout(() => {
         setLoading(false);
         }, 500);        
@@ -31,7 +39,17 @@ function Projeto () {
         
     
     return(
-      <main className='animate__animated animate_fadeIn'>        
+      <main className='animate__animated animate_fadeIn'>      
+
+              <div id="exitDiv">
+                <Link to="/projetos" id="exitLinkD" reloadDocument={true} preventScrollReset={true} > 
+                  <i className="bi bi-box-arrow-left" id="exitIcon"/> 
+                </Link>
+                {/* Mobile */}
+                <Link to="/projetos" id="exitLinkM" preventScrollReset={true} > 
+                  <i className="bi bi-box-arrow-left" id="exitIcon"/> 
+                </Link>
+              </div>  
         
         {loading ? 
         <section id="ItemSectionBlank">
@@ -39,12 +57,7 @@ function Projeto () {
           <LoadingCircle />
           </div>
         </section> : (
-      <section id="ItemSection">
-        <div id="exitDiv">
-          <Link to="/projetos" id="exitLink" reloadDocument={true} preventScrollReset={true} > 
-                  <i className="bi bi-box-arrow-left" id="exitIcon"/> 
-            </Link>
-          </div>                       
+      <section id="ItemSection">                       
     <h3> {Pjdata.data?.attributes.nome} </h3>
     <h5> Tipo de Projeto | {Pjdata.data?.attributes.tipo}</h5> 
       <div className="projectText">

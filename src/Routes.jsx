@@ -59,10 +59,10 @@ const router = createBrowserRouter([
             ]
         },
 
-        // {
-        //     path: 'Projetos/:id/:nome'  ,
-        //     element: <Projeto />
-        // },
+        {
+            path: 'projeto/:id/:nome'  ,
+            element: <Projeto />
+        },
     ])
 
 function Routes() {        
