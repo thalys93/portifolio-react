@@ -42,7 +42,7 @@ function Projeto () {
       <main className='animate__animated animate_fadeIn'>      
 
               <div id="exitDiv">
-                <Link to="/projetos" id="exitLinkD" reloadDocument={true} preventScrollReset={true} > 
+                <Link to="/projetos" id="exitLinkD" preventScrollReset={true} onClick={closeModal}> 
                   <i className="bi bi-box-arrow-left" id="exitIcon"/> 
                 </Link>
                 {/* Mobile */}

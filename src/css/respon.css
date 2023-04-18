@@ -20,6 +20,11 @@
         display: none;
     }
 
+    /* ProjectCard */
+    #LinkM{
+        display: none;
+    }
+
 }
 
 /* Tablets */

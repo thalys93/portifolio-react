@@ -7,7 +7,7 @@ import { apiField, apiProjects } from '../../services/api';
 // Import do Modal
 import Pjmodal from './Pjmodal';
 
-
+// CSS
 import './projects.css'
 
 
@@ -55,7 +55,7 @@ function ProjectCard() {
     };
 
     
-    // Modal        
+    // Modal            
     const [modalIsOpen, setModalIsOpen] = useState(false);    
 
     function openModal() {
@@ -97,16 +97,22 @@ function ProjectCard() {
             <div id='pjDetails'>
           <img src={local + pj.attributes.image.data.attributes.url } className="imgBk"/>                         
           {/* Desktop Modal */}
-            <Link to={pj.id +'/'+ pj.attributes.nomespace} 
+            {/* <Link to={pj.id +'/'+ pj.attributes.nomespace} 
             className='btn btn-outline-light' 
             onClick={openModal}
             preventScrollReset={true}
-            >Saiba Mais sobre o {pj.attributes.nome}            
-            </Link>                      
-            <Pjmodal isOpen={modalIsOpen} onRequestClose={closeModal} onAbort={closeModal} />        
+            >Saiba Mais sobre o {pj.attributes.nome}
+            </Link>  */}
+
+            <Pjmodal 
+            isOpen={modalIsOpen} 
+            onRequestClose={closeModal}
+            />
+
+          
           {/* Mobile Option */}          
-          <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light'>
-            Saiba Mais sobre o {pj.attributes.nome}
+          <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light' id='LinkM'>
+            *Saiba Mais sobre o {pj.attributes.nome}
           </Link>
             </div>
             <hr />
