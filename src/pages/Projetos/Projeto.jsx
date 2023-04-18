@@ -1,14 +1,21 @@
+// React , Link, UseParams , Modal
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 
+
+// Loading
 import LoadingCircle from "../layout/loading-component/Loading";
+
+// Services
 import { apiId } from "../../services/api";
 
 // Icons
 import { FaGithub } from "react-icons/fa";
 
+// CSS
 import './PjCard.css'
+import './modalUtils.css'
 
 
 function Projeto () {
@@ -36,26 +43,21 @@ function Projeto () {
         setLoading(false);
         }, 500);        
     }, []);
-        
+       
     
-    return(
-      <main className='animate__animated animate_fadeIn'>      
-
-              <div id="exitDiv">
-                <Link to="/projetos" id="exitLinkD" preventScrollReset={true} onClick={closeModal}> 
-                  <i className="bi bi-box-arrow-left" id="exitIcon"/> 
-                </Link>
+    return(      
+      <main className='animate__animated animate_fadeIn'>
+      
+              <div id="exitDiv" hidden>
                 {/* Mobile */}
-                <Link to="/projetos" id="exitLinkM" preventScrollReset={true} > 
+                <Link to="/projetos" id="exitLinkM" preventScrollReset={true}> 
                   <i className="bi bi-box-arrow-left" id="exitIcon"/> 
                 </Link>
               </div>  
         
-        {loading ? 
+      {loading ? 
         <section id="ItemSectionBlank">
-          <div id="ItemDivBlank">
-          <LoadingCircle />
-          </div>
+          <LoadingCircle />          
         </section> : (
       <section id="ItemSection">                       
     <h3> {Pjdata.data?.attributes.nome} </h3>
@@ -68,11 +70,12 @@ function Projeto () {
       <div >
         <img src={local + Pjdata.data?.attributes.image.data.attributes.url}                      
              alt={Pjdata.data?.attributes.image.data.attributes.name}
-             className="projectImg"/>
+             className="projectImg"
+        />
       </div>
-      </section>      
+      
+      </section>
       )}
-
       </main>      
     )
 }

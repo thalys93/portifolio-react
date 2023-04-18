@@ -55,7 +55,6 @@
 }
 
 /* Exit */
-
 #exitDiv{
     display: flex;
     justify-content: start;
@@ -94,10 +93,11 @@
 
 #ItemSectionBlank{
     display: flex;
-
-    padding-right: 100pt;
-    padding-left: 90pt;
-
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 15%;
 }
 
 #ItemDivBlank{

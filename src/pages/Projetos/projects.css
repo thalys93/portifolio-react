@@ -143,31 +143,3 @@
     justify-content: center;
 }
 
-/* Modal */
-.ModalProject{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;    
-
-    background-color: #373737;        
-    border-radius: 25pt;
-
-
-    margin-left: 150pt;
-    margin-right: 150pt;
-    margin-bottom: 45pt;
-        
-    scale: 0.75;
-}
-
-.Overblur{
-    background-color: #1a1a1a1f;        
-    backdrop-filter: blur(0.9px);
-    
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-}

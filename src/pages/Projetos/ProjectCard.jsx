@@ -1,7 +1,13 @@
+// Import do React, Use State ,Use Effect , Link , Modal
 import React, { useState , useEffect} from 'react'
-import LoadingCircle from '../layout/loading-component/Loading';
 import { Link } from 'react-router-dom';
+
+
+// Import dos Serviços da API
 import { apiField, apiProjects } from '../../services/api';
+
+// Import do LoadingCircle
+import LoadingCircle from '../layout/loading-component/Loading';
 
 
 // Import do Modal
@@ -9,11 +15,11 @@ import Pjmodal from './Pjmodal';
 
 // CSS
 import './projects.css'
+import './modalUtils.css'
 
 
-function ProjectCard() {
-      
-  // Card Vazio  
+function ProjectCard() {      
+  // Card Vazio    
     const [emptyCard, setEmptyCard] = useState([]);
     useEffect(() => {
       const fetchEmptyData = async () => {
@@ -26,7 +32,6 @@ function ProjectCard() {
       };
       fetchEmptyData();
     }, []);   
-
     
     // constante para obtenção de dados para imagens
     const local = "http://26.79.95.70:1337"   
@@ -53,23 +58,9 @@ function ProjectCard() {
     const LstyleInvisible = {
       opacity: '0',
     };
-
-    
-    // Modal            
-    const [modalIsOpen, setModalIsOpen] = useState(false);    
-
-    function openModal() {
-      setModalIsOpen(true);
-    }
-
-    function closeModal () {
-      setModalIsOpen(false);
-    }
-    
-
-
+      
   return (
-    // Depois de Carregado
+    // Antes de Carregar
     <div id='pjList'>
     {loading ? 
       emptyCard.data?.map(() => (
@@ -97,22 +88,16 @@ function ProjectCard() {
             <div id='pjDetails'>
           <img src={local + pj.attributes.image.data.attributes.url } className="imgBk"/>                         
           {/* Desktop Modal */}
-            {/* <Link to={pj.id +'/'+ pj.attributes.nomespace} 
-            className='btn btn-outline-light' 
-            onClick={openModal}
-            preventScrollReset={true}
-            >Saiba Mais sobre o {pj.attributes.nome}
-            </Link>  */}
+            <Link 
+                to={pj.id +'/'+ pj.attributes.nomespace}                
+                preventScrollReset={true}>            
+            <Pjmodal/>                                           
+            </Link>
 
-            <Pjmodal 
-            isOpen={modalIsOpen} 
-            onRequestClose={closeModal}
-            />
 
-          
           {/* Mobile Option */}          
           <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light' id='LinkM'>
-            *Saiba Mais sobre o {pj.attributes.nome}
+            *Saiba Mais sobre o Projeto
           </Link>
             </div>
             <hr />

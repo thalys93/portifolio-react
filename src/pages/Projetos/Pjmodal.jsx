@@ -1,69 +1,48 @@
-import React , {useState, useEffect} from 'react'
-
-import Modal from 'react-modal'
+// React, Modal, Link
+import React, { useState } from 'react'
+import { Modal, ModalBody, ModalTitle } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import {apiProjects } from '../../services/api';
 
-
-// Import do Projeto
+// Import do Card do Projeto
 import Projeto from './Projeto';
 
+// CSS
 import './projects.css'
+import './modalUtils.css'
 
-function Pjmodal({isOpen , onClose} ) {
+function Pjmodal() {
 
-  const style = {
-    content: {        
-      position: 'relative',
-      top: 'auto',            
-      bottom: '50pt',      
-      height: '650pt',
-      margin: '5pt',
-    }}
+    const [mostrarModal, setMostrarModal] = useState(false);
 
-    const [PjData, setPjData] = useState([]);
-    useEffect(() => {  
-      const fetchData = async () => {
-        try {
-          const data = await apiProjects();
-          setPjData(data);
-        } catch (error){
-          console.error('Falha ao buscar dados da API', error);
-        }
-      };
-    fetchData();    
-    }, []);
+    const AbrirModal = () => setMostrarModal(true);
+    const FecharModal = () => setMostrarModal(false);
 
-
-
-
-      
-Modal.setAppElement('#root');
-
+    
   return (
     <div>
-      
-      {PjData.map((pj) => (
+        <button onClick={AbrirModal} id="modalButton" className='btn btn-outline-light'>Saiba Mais</button>
 
-      <Link to={pj.id +'/'+ pj.attributes.nomespace} 
-        className='btn btn-outline-light' 
-        onClick={openModal}
-        preventScrollReset={true}
-        >Saiba Mais sobre o {pj.attributes.nome}
-      </Link> 
-
-    <Modal
-        isOpen={isOpen}
-        onRequestClose={onClose}              
-        className='ModalProject'
-        style={style}      
-        overlayClassName='Overblur'>                    
-        <Projeto />                                        
-    </Modal>
-
-
-    </div>            
+      <Modal  
+        show={mostrarModal}        
+        onHide={FecharModal}
+        backdropClassName='Overblur'
+        contentClassName='ModalProject'
+        scrollable={false}
+        animation={false}
+      > 
+        <ModalTitle>
+          <div id="ModalExitDiv">
+            <Link to="/projetos" id="exitLinkD" preventScrollReset={true}> 
+              <i className="bi bi-box-arrow-left" id="exitIcon" onClick={FecharModal}/>
+            </Link>                        
+          </div>          
+        </ModalTitle>                            
+          <ModalBody>            
+            <Projeto />
+          </ModalBody>                    
+        </Modal>
+    </div>      
   )
 }
-
+    
 export default Pjmodal
