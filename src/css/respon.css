@@ -24,6 +24,12 @@
     font-size: 50pt;
     }
 
+    /* Sobre */
+
+    .UnderLine{
+        display: none;
+    }
+
     /* PjCard */
     #ItemSection{
         display: flex;
@@ -49,7 +55,7 @@
 }
 
 /* Tablets */
-@media only screen and (max-width: 490px){
+@media only screen and (min-width: 490px) and (max-width: 1023px) {
 
     /* Barra de Nav */
     #navUL{
@@ -60,7 +66,18 @@
         display: none;
     }
 
+    /* Sobre */
 
+    .UnderLine{
+        display: none;
+    }
+
+
+    /* Projetos */
+
+    #modalButtonD{
+        display: none;
+    }
 }
 
 /* Mobile */
@@ -116,8 +133,25 @@
         
         margin-left: 0pt;
         margin-right: 0pt;
+        margin-top: -19pt;
+
+        scale: 0.9;
     }
 
+    
+
+    .UnderLine{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        margin-top: -15pt;
+        margin-bottom: 15pt;        
+
+        margin-left: 90pt;
+        margin-right: 90pt;
+        
+    }
 
 
     #iconsDiv{
@@ -131,6 +165,20 @@
     }
 
 
+    
+    /* Contato */
+    #contactSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;      
+        margin-top: 100pt;
+        
+        margin-bottom: 130pt;
+    }
+
+
+    /* Projetos */
 
     /* PjCard */
     #modalButtonD{
@@ -170,6 +218,45 @@
         display: flex;
 
         margin-top: -15pt;
+    }
+
+
+    /* Projeto */
+    #ItemSection{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+
+        scale: 0.9;
+                                         
+    }
+
+    #prodMain{
+        display: flex;        
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+        margin-top: -50pt;
+        margin-right: -50pt;
+        margin-left: -25pt;
+                
+    }
+
+    .projectImg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        scale: 0.78;           
+        border-radius: 0;
+
+        padding-left: 10pt;
+                        
+        margin-top: -25pt;
     }
 
 }

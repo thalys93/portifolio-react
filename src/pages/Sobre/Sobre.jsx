@@ -19,13 +19,14 @@ function Sobre() {
           <h1> Luis Thalys Rodrigues</h1>
           <h2> Quem Sou Eu?</h2>
         </div> 
+          <hr className='UnderLine'/>
 
         <div id='TxtDiv' className='animate__animated animate__fadeInRightBig'>
           <p> Eu Sou um desenvolvedor <b>Front-end</b> com conhecimento
          Intermediário em 
          <b id='htmlTxt'> HTML </b>
-         e Tecnologias como : <b id='reactTxt'>React  </b> ,
-        <b id='angularTxt'> Angular </b>. </p>
+         e Frameworks como : <b id='reactTxt'>React  </b> ,
+        <b id='angularTxt'> Angular </b> </p>
 
          <p> Especialista em desenvolvimento de aplicações web responsivas e interativas
          Como Desenvolvedor do Ecommerce de fios <b><a href='https://github.com/thalys93/dabruatelie' target='_blank' className='atelie'>Dabruatelie</a></b>, 
