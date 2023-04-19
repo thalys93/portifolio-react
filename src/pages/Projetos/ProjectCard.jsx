@@ -97,7 +97,7 @@ function ProjectCard() {
 
           {/* Mobile Option */}          
           <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light' id='LinkM'>
-            *Saiba Mais sobre o Projeto
+            Saiba Mais
           </Link>
             </div>
             <hr />

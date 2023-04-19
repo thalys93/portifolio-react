@@ -20,7 +20,7 @@ function Pjmodal() {
     
   return (
     <div>
-        <button onClick={AbrirModal} id="modalButton" className='btn btn-outline-light'>Saiba Mais</button>
+        <button onClick={AbrirModal} id="modalButtonD" className='btn btn-outline-light'>Saiba Mais</button>
 
       <Modal  
         show={mostrarModal}        
@@ -29,6 +29,7 @@ function Pjmodal() {
         contentClassName='ModalProject'
         scrollable={false}
         animation={false}
+        centered={true}        
       > 
         <ModalTitle>
           <div id="ModalExitDiv">

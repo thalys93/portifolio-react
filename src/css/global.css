@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
 
-    transition: 0.5s;    
+    transition: 0.5s;        
 }
 
 body{
     background-color: #252525;
     background-image: url(/assets/img/wallpaper.png);    
     background-size: 500pt;
+    
 
     color: aliceblue;
 }

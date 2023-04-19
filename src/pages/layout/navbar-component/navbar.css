@@ -1,5 +1,3 @@
-
-
 #navUL{
     display: flex;
     flex-direction: row;
@@ -12,10 +10,10 @@
     margin-top: 15pt;
     margin-bottom: 5pt;
     
-    list-style: none;
-
-        
+    list-style: none;        
 }
+
+
 
 #HomeDiv{
     display: flex;

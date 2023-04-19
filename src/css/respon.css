@@ -1,6 +1,28 @@
 /* Desktop */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) {   
+    /* Barra de Navegação */
+    #navUL{
+        display: flex;
+    }
+
+    #burgerMenu{
+        display: none;
+    }
+    
     /* Modal */
+    .ModalProject{
+    position: fixed;    
+        
+    top: -80pt;    
+    right: 10pt;
+                       
+    width: 950pt;
+    height: 660pt;
+            
+    scale: 0.70;
+
+    font-size: 50pt;
+    }
 
     /* PjCard */
     #ItemSection{
@@ -10,7 +32,6 @@
         margin-top: -50pt;
         
     }
-
 
     #exitLinkD{
         display: flex;
@@ -29,10 +50,100 @@
 
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #navUL{
+        display: flex;
+    }
+
+    #burgerMenu{
+        display: none;
+    }
 
 }
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+
+    /* Barra de Navegação */
+    #navUL{
+        display: none;
+    }    
+
+    #burgerMenu{
+        display: flex;
+        
+    }
+
+    /* PjCard */
+    #modalButtonD{
+        display: none;
+    }
+
+    #pjList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        scroll-behavior: smooth;
+        overflow-x: hidden;       
+        overflow-y: hidden; 
+                
+    }
+
+    .imgBk{    
+    height: 120pt;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    border-radius: 5pt;    
+    }
+
+    #pjTitle{
+        text-align: center;    
+    }
+
+    #pjCard{                
+        display: flex;
+        flex-direction: column;
+        
+        scale: 0.90;
+    }
+
+    #LinkM{
+        display: flex;
+
+        margin-top: -15pt;
+    }
+}
+
+@media screen and (max-width: 320px){
+    
+    /* Pj Card */
+
+    .imgBk{    
+    height: 90pt;
+    margin-left: 10pt;
+    margin-right: 10pt;
+    border-radius: 5pt;    
+    }
+
+
+    #pjCard{
+        scale: 1
+    }   
+    
+    #pjTitle{
+        scale: 0.8;
+    }
+
+    #pjList{
+        width: 170pt;
+
+        position: absolute;
+
+        left: 40pt;
+        top: 80pt;
+        gap: 15pt;
+    }
+
+
 
 }
