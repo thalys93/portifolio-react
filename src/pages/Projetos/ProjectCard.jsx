@@ -8,9 +8,6 @@ import { Placeholder, Button } from 'react-bootstrap';
 // Import dos Serviços da API
 import { apiField, apiProjects } from '../../services/api';
 
-// Import do LoadingCircle
-import LoadingCircle from '../layout/loading-component/Loading';
-
 
 // Import do Modal
 import Pjmodal from './Pjmodal';
@@ -63,12 +60,23 @@ function ProjectCard() {
     {loading ? 
       emptyCard.data?.map(() => (        
     <div id="pjListBlank">          
-      <Placeholder animation="wave" id="pjCardBlank">       
+      <Placeholder animation="wave" id="pjCardBlank">    
+          <Placeholder as="h3" animation="glow" className="BlankH3">
+            <Placeholder style={{ width : '100pt' }} />
+          </Placeholder>   
+
         <div id='pjDetails'>
-          <Placeholder as='img' animation='glow' id="blankImg" />                                          
-      <Placeholder as="button" animation="glow" className="btn btn-outline-light" id="BlankButton" />                          
+          <div>
+        <Placeholder as='img' animation="glow" className="blankImg"/>                            
+          </div> 
+
+      <Placeholder animation="glow">
+        <Placeholder className="btn btn-outline-light" id="BlankButton" />
+      </Placeholder>
+
         </div>
       </Placeholder>
+      
     </div>
     )) : (      
         PjData.data?.map((pj) => (          

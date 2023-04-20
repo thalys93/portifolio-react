@@ -2,10 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-
-
-// Loading
-import LoadingCircle from "../layout/loading-component/Loading";
+import { Placeholder } from "react-bootstrap";
 
 // Services
 import { apiId } from "../../services/api";
@@ -41,12 +38,11 @@ function Projeto () {
         fetchData();        
         setTimeout(() => {
         setLoading(false);
-        }, 500);        
-    }, []);
-       
+        }, 1000);        
+    }, []);       
     
     return(    
-      <main className='animate__animated animate_fadeIn' id="prodMain" >
+      <main id="prodMain" >
       
               <div id="exitDiv">
                 {/* Mobile */}
@@ -57,7 +53,61 @@ function Projeto () {
         
       {loading ? 
         <section id="ItemSectionBlank">
-          <LoadingCircle />          
+
+        <div className="blankTitleDiv">
+
+          <div className="titleA">
+          <Placeholder as='h3' animation="glow">
+            <Placeholder className="BlankTxt70"/>                         
+          </Placeholder>
+          </div>
+           
+          <div className="titleB">
+          <Placeholder as="h5" animation="glow">
+            <Placeholder className="BlankTxt40"/>            
+          </Placeholder>
+              <p className="line">|</p>
+          <Placeholder as="h5" animation="glow">           
+            <Placeholder            
+            className="BlankTxt40"/>          
+          </Placeholder>
+          </div>
+        </div>
+
+        <div className="BlankDescription">
+          
+            <Placeholder                      
+            animation="glow"          
+            as="p">
+            <Placeholder className="pPlaceholder" />            
+            </Placeholder>
+
+            <Placeholder                      
+            animation="glow"          
+            as="p">
+            <Placeholder className="pPlaceholder" />            
+            </Placeholder>
+
+            <Placeholder                      
+            animation="glow"          
+            as="p">
+            <Placeholder className="pPlaceholder" />            
+            </Placeholder>        
+
+        </div>
+          
+          <div className="projectTextBk">     
+          <i><Placeholder as="i" id="BlankI" animation="wave" /></i>       
+             
+             <p>|</p> 
+
+             <Placeholder as="p" animation="glow">
+              <Placeholder  className="BlankTxt60" />
+            </Placeholder>
+          </div>
+          <div>
+            <Placeholder as="img" id="BlankImg" animation="wave"/>            
+          </div>          
         </section> : (
       <section id="ItemSection">                       
     <h3> {Pjdata.data?.attributes.nome} </h3>

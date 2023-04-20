@@ -18,14 +18,12 @@
 
 #pjListBlank{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    text-align: center;
 
-    margin-top: 50pt;    
-
-    width: 500pt;    
-    
+    margin-top: 5pt;            
 }
 
 #pjList::-webkit-scrollbar{
@@ -68,6 +66,7 @@
     padding: 60pt;
     padding-left: 55pt;
     padding-right: 25pt;
+    padding-bottom: 25pt;
     width: 190pt;
     scale: 0.9;
     border: #313131 solid 0.5pt;
@@ -79,29 +78,36 @@
 
 #BlankButton{
     display: flex;    
-    justify-content: center;
+    justify-content: center;    
     align-items: center; 
-    margin-bottom: -50pt;
-    margin-right: 30pt;
+    flex-direction: column;        
     user-select: none;
 
-    width: 50pt;
-    height: 15pt;
+    width: 50pt;    
+    margin-bottom: -20pt;
+    margin-right: 35pt;
+    height: 15pt;    
 }
 
-#blankImg{
+.blankImg{
     width: 150pt;
     height: 90pt;
-    
+
+    background-color: #5b5b5b3f;
+    border: 1px solid #ffffff;   
+    margin-top: 5pt;     
     margin-right: 30pt;
-    margin-top: -40pt;
     
 }
 
-#BlankH3{
-    width: 50pt;
-    background-color: #676767;
-
+.BlankH3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: -50pt;    
+    margin-left: -35pt;    
+    
 }
 
 #pjTitle{
