@@ -1,6 +1,8 @@
 // Import do React, Use State ,Use Effect , Link , Modal
 import React, { useState , useEffect} from 'react'
 import { Link } from 'react-router-dom';
+import { Placeholder, Button } from 'react-bootstrap';
+
 
 
 // Import dos Serviços da API
@@ -51,37 +53,26 @@ function ProjectCard() {
       fetchData();               
     setTimeout(() => {
       setLoading(false);          
-    }, 1000);     
+    }, 1500);     
     }, []);
 
-
-    const LstyleInvisible = {
-      opacity: '0',
-    };
-      
   return (
     // Antes de Carregar
-    <div id='pjList'>
+    <ul id='pjList'>
+      <h3 id='mobileTitle'> Meus Projetos </h3>
     {loading ? 
-      emptyCard.data?.map(() => (
-    <div id="pjListBlank">
-      <li id='pjCardBlank'>
-        <div className='lineAnimation'> | </div>
-        <div id='pjtTitle'>
-          <h3></h3>
-        </div>
+      emptyCard.data?.map(() => (        
+    <div id="pjListBlank">          
+      <Placeholder animation="wave" id="pjCardBlank">       
         <div id='pjDetails'>
-          <img />
-          <div style={LstyleInvisible}>
-      <LoadingCircle  />
-          </div>
-
+          <Placeholder as='img' animation='glow' id="blankImg" />                                          
+      <Placeholder as="button" animation="glow" className="btn btn-outline-light" id="BlankButton" />                          
         </div>
-      </li>
+      </Placeholder>
     </div>
     )) : (      
         PjData.data?.map((pj) => (          
-        <li id='pjCard' key={pj.id} className='animate__animated animate_fadeIn'>          
+        <li id='pjCard' key={pj.id} className='animate__animated animate_fadeIn'>
             <div id='pjTitle'>
           <h3> Projeto : {pj.attributes.nome} </h3>           
             </div>
@@ -94,7 +85,6 @@ function ProjectCard() {
             <Pjmodal/>                                           
             </Link>
 
-
           {/* Mobile Option */}          
           <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light' id='LinkM'>
             Saiba Mais
@@ -104,7 +94,7 @@ function ProjectCard() {
         </li>
         ))
       )}  
-    </div>
+    </ul>
   )
 }
 

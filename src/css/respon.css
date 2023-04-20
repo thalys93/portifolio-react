@@ -30,6 +30,12 @@
         display: none;
     }
 
+    /* Projetos */
+    #mobileTitle{
+        display: none;
+    }
+
+
     /* PjCard */
     #ItemSection{
         display: flex;
@@ -55,7 +61,7 @@
 }
 
 /* Tablets */
-@media only screen and (min-width: 490px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
 
     /* Barra de Nav */
     #navUL{
@@ -76,6 +82,10 @@
     /* Projetos */
 
     #modalButtonD{
+        display: none;
+    }
+
+        #mobileTitle{
         display: none;
     }
 }
@@ -180,31 +190,40 @@
 
     /* Projetos */
 
+    #mobileTitle{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
     /* PjCard */
     #modalButtonD{
         display: none;
     }
 
     #pjList{
-        display: flex;
+        display: flex;        
         flex-direction: column;
-        align-items: center;
+        align-items: center;                
 
         scroll-behavior: smooth;
         overflow-x: hidden;       
         overflow-y: hidden; 
                 
+        margin-right: 27pt;
     }
 
     .imgBk{    
-    height: 120pt;
+    height: 100pt;
     margin-left: 10pt;
     margin-right: 10pt;
     border-radius: 5pt;    
     }
 
     #pjTitle{
-        text-align: center;    
+        text-align: center; 
+        scale: 0.8;
     }
 
     #pjCard{                
@@ -230,7 +249,7 @@
         justify-content: center;
         text-align: center;
 
-        scale: 0.9;
+        scale: 0.9;                
                                          
     }
 
@@ -240,9 +259,10 @@
         flex-wrap: wrap;
         justify-content: center;
         
-        margin-top: -50pt;
-        margin-right: -50pt;
-        margin-left: -25pt;
+        margin-bottom: 50pt;                
+        margin-left: 110pt;        
+
+        width: 30%;
                 
     }
 
@@ -251,12 +271,23 @@
         justify-content: center;
         align-items: center;
 
-        scale: 0.78;           
+        scale: 0.68;           
         border-radius: 0;
 
         padding-left: 10pt;
                         
-        margin-top: -25pt;
+        margin-top: -45pt;
+    }
+
+    #exitDiv{
+        display: flex;
+        justify-content: start;
+        align-items: start;
+
+        margin-bottom: -80pt;
+        margin-right: 280pt;
+
+        scale: 0.9;
     }
 
 }

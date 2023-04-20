@@ -45,10 +45,10 @@ function Projeto () {
     }, []);
        
     
-    return(      
-      <main className='animate__animated animate_fadeIn' id="prodMain">
+    return(    
+      <main className='animate__animated animate_fadeIn' id="prodMain" >
       
-              <div id="exitDiv" hidden>
+              <div id="exitDiv">
                 {/* Mobile */}
                 <Link to="/projetos" id="exitLinkM" preventScrollReset={true}> 
                   <i className="bi bi-box-arrow-left" id="exitIcon"/> 
@@ -76,7 +76,7 @@ function Projeto () {
       
       </section>
       )}
-      </main>      
+      </main>        
     )
 }
 
