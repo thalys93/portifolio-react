@@ -1,6 +1,6 @@
 #projectMain{
     display: flex;
-    flex-direction: column;              
+    flex-direction: column;     
 }
 
 
@@ -13,7 +13,7 @@
 
     scroll-behavior: smooth;
     overflow-x: auto;       
-    overflow-y: hidden;             
+    overflow-y: hidden;      
 }
 
 #pjListBlank{

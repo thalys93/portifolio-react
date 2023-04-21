@@ -16,11 +16,14 @@ function Projetos() {
     <main id='projectMain'>
       <Navbar />
       <section id="projectSection">
-      <ol>                          
+        <h3 id='mobileTitle'> Meus Projetos </h3>
+      <ol className='olProject'>                          
         <ProjectCard />
       </ol>
       </section>
-      <Footer />      
+        <div className='footerPJ'>
+      <Footer/>      
+        </div>
     </main>
   )
 }

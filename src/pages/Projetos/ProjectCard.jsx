@@ -55,8 +55,7 @@ function ProjectCard() {
 
   return (
     // Antes de Carregar
-    <ul id='pjList'>
-      <h3 id='mobileTitle'> Meus Projetos </h3>
+    <ul id='pjList'>      
     {loading ? 
       emptyCard.data?.map(() => (        
     <div id="pjListBlank">          
