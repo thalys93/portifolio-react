@@ -11,10 +11,10 @@
     
     /* Modal */
     .ModalProject{
-    position: fixed;    
+    position: absolute;    
         
     top: -80pt;    
-    right: 10pt;
+    left: -300pt;
                        
     width: 950pt;
     height: 660pt;
@@ -22,15 +22,98 @@
     scale: 0.60;    
     }
 
-    /* Sobre */
+
+    #ItemSectionBlank{
+        position: absolute;
+
+        bottom: 150pt;
+        right: 400pt;
+
+        scale: 1.7;
+        
+        
+    }
+
+/* Sobre */
+
+    .SobreSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+
+        margin-left: 15pt;
+        margin-right: 15pt;
+        
+        margin-bottom: -2pt;
+    }
+
+    #photo{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        
+        margin-left: 0pt;    
+        margin-top: 50pt;
+    }
+
+    #TxtDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;      
+        user-select: none;
+        text-align: center;
+        
+        margin-top: 25pt;        
+
+        scale: 1;
+    }    
+
+    #iconsDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+
+    }
 
     .UnderLine{
-        display: none;
+        display: flex;
+        margin-bottom: -15pt;
+        margin-top: -15pt;                
     }
 
     /* Projetos */
     #mobileTitle{
         display: none;
+    }
+
+    #projectMain{
+        display: flex;
+        flex-direction: column;                                       
+    }
+
+    #projectSection{
+        align-items: center;
+        justify-content: center;      
+        margin-top: 40pt;
+        margin-right: 55pt;
+        margin-left: 55pt;        
+
+        margin-bottom: 30pt;                
+    }
+
+    .olProject{
+        display: flex;
+        flex-direction: column;                
+        flex-wrap: nowrap;
+        height: 100%;        
+
+        margin-left: 50pt;
+        margin-right: 50pt;        
     }
 
 
@@ -42,6 +125,30 @@
         margin-top: -50pt;
         
     }
+
+    #pjCard{                
+        display: flex;                     
+
+        scale: 0.90;
+    }
+
+    #pjCardBlank{    
+    display: flex;
+        
+    background-color: #2e2e2e;
+    margin-top: 50pt;
+    padding: 60pt;
+    padding-left: 55pt;
+    padding-right: 25pt;
+    padding-bottom: 25pt;
+    height: 190pt;
+    width: 200pt;
+    scale: 0.93;
+    border: #313131 solid 0.5pt;
+        
+    list-style: none;
+    border-radius: 0pt 5pt 5pt 0pt;
+        }
 
     #exitLinkD{
         display: flex;
@@ -69,8 +176,51 @@
     #burgerMenu{
         display: none;
     }
-
+    
     /* Sobre */
+
+    .SobreSection{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;      
+        
+        margin-bottom: 5pt;
+    }
+
+    #photo{
+        display: flex;
+        justify-content: center;
+        align-items: center;    
+        
+        margin-left: 0pt;    
+        margin-top: 50pt;
+    }
+
+    #TxtDiv{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;      
+        user-select: none;
+        text-align: center;
+        
+        margin-left: 0pt;
+        margin-right: 0pt;
+        margin-top: -19pt;
+
+        scale: 0.9;
+    }    
+
+    #iconsDiv{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s;
+
+    }
 
     .UnderLine{
         display: none;
@@ -78,6 +228,28 @@
 
 
     /* Projetos */
+
+   #projectMain{
+        display: flex;
+        flex-direction: column;                                       
+    }
+
+    #projectSection{
+        display: flex;
+        flex-direction: column;
+        padding-top: 150pt;
+        padding-bottom: 150pt;                
+    }
+
+    .olProject{
+        display: flex;
+        flex-direction: column;                
+        flex-wrap: nowrap;
+        margin-top: -100pt;        
+        margin-bottom: -100pt;
+
+    }
+    
 
     #modalButtonD{
         display: none;
@@ -99,7 +271,7 @@
     #burgerMenu{
         display: flex;
         
-    }
+    }    
 
     /* Página Inicial */
     .HomeSection{
@@ -236,8 +408,6 @@
         padding-right: 50pt;
 
         margin-left: 50pt;
-
-
     }
 
     /* PjCard */
@@ -355,9 +525,9 @@
     }
 
     #pjList{
+        display: flex;
         width: 170pt;
 
-        position: absolute;
 
         left: 40pt;
         top: 80pt;
