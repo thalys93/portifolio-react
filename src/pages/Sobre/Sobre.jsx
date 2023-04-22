@@ -4,7 +4,7 @@ import React from 'react'
 import './sobre.css'
 
 // Imagens
-let Me2 = "/src/assets/img/me2.jpg"
+let Me2 = "/img/me2.jpg"
 
 function Sobre() {
   return (
