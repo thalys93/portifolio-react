@@ -7,7 +7,7 @@ import { SiJavascript } from 'react-icons/si'
 
 
 // Imagens
-let PerfImg = '/assets/img/me.jpg'
+let PerfImg = 'src/assets/img/me.jpg'
 
 function Home() {
   return (
