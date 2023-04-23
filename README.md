@@ -1,9 +1,9 @@
 # Portifolio Em React
- - 🟦 Usando o Framework React
+ - 🟦 FrontEnd React
  
- - 🟪 Com a Biblioteca do Strapi
+ - 🟪 BackEnd - Node.js
  
- - 🟨 Banco de dados **MySQL**
+ - 🟨 Banco de dados **MongoBD**
  
  **Em fase de DESENVOLVIMENTO** 
  
