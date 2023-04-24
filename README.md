@@ -1,11 +1,13 @@
 # Portifolio Em React
- - 🟦 Usando o Framework React
+ - 🟦 Front End - React
  
- - 🟪 Com a Biblioteca do Strapi
+ - 🟪 BackEnd - Node.js /Strapi
  
- - 🟨 Banco de dados **MySQL**
+ - 🟨 Banco de dados **PostGreeSQL**
  
- **Em fase de DESENVOLVIMENTO** 
- 
- # Página Inicial
- ![image](https://user-images.githubusercontent.com/102838847/229186819-6007372d-0013-4730-8db5-e73de7ad1438.png)
+ **Em fase de Produção (postado na internet) ** 
+
+## Branch de Produção
+- Nesta Branch são compilado os Arquivos e enviados para o host do firebase
+- Link do Firebase : https://portifolio-luis-thalys.web.app/
+
