@@ -7,8 +7,6 @@
  
  **Em fase de Produção (postado na internet) ** 
 
-## Branch de Desenvolvimento
-- Nesta Branch são compilado os Arquivos e enviados para o host do firebase
-- Também é feito o Desenvolvimento da Aplicação
+## Branch de Produção
 - Link do Firebase : https://portifolio-luis-thalys.web.app/
 
