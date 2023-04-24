@@ -21,9 +21,7 @@ function Projeto () {
     
   // apiID do Projeto
     const [loading, setLoading] = useState(true);
-    const [Pjdata, setPjData] = useState([]);  
-
-    const local = "http://26.79.95.70:1337"
+    const [Pjdata, setPjData] = useState([]);      
     
 
     useEffect(() => {                            
@@ -118,7 +116,7 @@ function Projeto () {
       </div>
         <hr />
       <div >
-        <img src={local + Pjdata.data?.attributes.image.data.attributes.url}                      
+        <img src={Pjdata.data?.attributes.image.data.attributes.url}                      
              alt={Pjdata.data?.attributes.image.data.attributes.name}
              className="projectImg"
         />

@@ -6,7 +6,7 @@ import { Placeholder, Button } from 'react-bootstrap';
 
 
 // Import dos Serviços da API
-import { apiField, apiProjects } from '../../services/api';
+import {apiProjects } from '../../services/api';
 
 
 // Import do Modal
@@ -23,18 +23,14 @@ function ProjectCard() {
     useEffect(() => {
       const fetchEmptyData = async () => {
         try {
-          const data = await apiField();
+          const data = await apiProjects();
           setEmptyCard(data);
         } catch (error){
           console.error('Falha ao buscar dados da API', error);
         }
       };
       fetchEmptyData();
-    }, []);   
-    
-    // constante para obtenção de dados para imagens
-    const local = "http://26.79.95.70:1337"   
-
+    }, []);                
     // Card Preenchido
     const [PjData, setPjData] = useState([]);
     const [loading, setLoading] = useState(true);      
@@ -58,7 +54,7 @@ function ProjectCard() {
     <ul id='pjList'>      
     {loading ? 
       emptyCard.data?.map(() => (        
-    <div id="pjListBlank">          
+    <div id="pjListBlank" key={emptyCard.id}>          
       <Placeholder animation="wave" id="pjCardBlank">    
           <Placeholder as="h3" animation="glow" className="BlankH3">
             <Placeholder style={{ width : '100pt' }} />
@@ -84,7 +80,7 @@ function ProjectCard() {
           <h3> Projeto : {pj.attributes.nome} </h3>           
             </div>
             <div id='pjDetails'>
-          <img src={local + pj.attributes.image.data.attributes.url } className="imgBk"/>                         
+          <img src={pj.attributes.image.data.attributes.url } className="imgBk"/>                         
           {/* Desktop Modal */}
             <Link 
                 to={pj.id +'/'+ pj.attributes.nomespace}                
