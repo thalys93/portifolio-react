@@ -2,18 +2,18 @@ import React from 'react'
 
 // Estilizações e Icones
 import './home.css'
-import styled from 'styled-components'
-import {Html5} from '@styled-icons/boxicons-logos/Html5'
-import {Css3} from '@styled-icons/boxicons-logos/Css3'
-import {Javascript} from '@styled-icons/boxicons-logos/Javascript'
-import {ReactLogo} from '@styled-icons/boxicons-logos/ReactLogo'
-import {LogoAngular} from '@styled-icons/ionicons-solid/LogoAngular'
-
-let PerfImg = '/assets/img/me.jpg'
+import  { FaHtml5, FaCss3Alt, FaAngular, FaReact} from 'react-icons/fa';
+import { SiJavascript } from 'react-icons/si'
 
 
+// Imagens
+let PerfImg = '/img/me.jpg'
 
 function Home() {
+
+  document.title = 'Luis Thalys RX - Página Inicial'
+  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-casa-16_nutbqc.png';
+
   return (
     <section className='HomeSection'>
       <div id='FigureDiv'>
@@ -23,35 +23,37 @@ function Home() {
         </figure>
         <h2>Desenvolvedor Front End</h2>         
       </div>          
-        <div id="iconsDiv"> 
-          <a id="iconDetails" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank'>
-            <Html5 id="icon" />
-            <span>HTML</span>            
+        <div id="iconsDiv" className='iconDiv'> 
+          <a id="iconDetails" className='Html' href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank'>
+            <FaHtml5 className="icon"/>
+            <span id='Html'>HTML</span>            
           </a>
 
-          <a id="iconDetails" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
-          <Css3 id="icon"/>
+          <a id="iconDetails" className='Css' href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+          <FaCss3Alt className="icon"/>
           <span>CSS</span>
           </a>
 
-          <a id="iconDetails" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
-          <Javascript id="icon"/>
+          <a id="iconDetails" className='Javascript' href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+          <SiJavascript className="icon"/>
           <span>Javascript</span>
           </a>
 
-          <a id="iconDetails" href="https://react.dev/" target="_blank">
-          <ReactLogo id="icon"/>
+          <a id="iconDetails" className='React' href="https://react.dev/" target="_blank">
+          <FaReact className="icon"/>
           <span>React</span>
           </a>
 
-          <a id="iconDetails" href="https://angular.io/" target="_blank">
-          <LogoAngular id="icon"/>                   
+          <a id="iconDetails" className='Angular' href="https://angular.io/" target="_blank">
+          <FaAngular className="icon" />
           <span>Angular</span>
           </a>
+        </div>          
 
-        </div>
     </section>
   )
 }
+
+
 
 export default Home

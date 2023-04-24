@@ -1,0 +1,180 @@
+/* Projeto */
+#ItemSection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;     
+
+    margin-top: 50pt;
+    margin-bottom: 25pt;
+
+    /* scale: 0.85; */
+}
+
+.projectText{
+    display: flex;    
+    padding: 10pt;
+    border-radius: 15pt;
+    user-select: none;
+
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 50pt;
+    margin-right: 50pt;
+
+    font-size: 15pt;
+
+    font-family: 'Open Sans', sans-serif;
+}
+
+.projectImg{
+    height: 310pt;
+    border-radius: 15pt;
+    margin-bottom: 15pt;
+    
+    user-select: none;
+}
+
+#projectLink{
+    font-family: 'Roboto', sans-serif;    
+}
+
+
+
+#github{
+    font-size: 20pt;
+    margin-bottom: 5pt;
+}
+
+/* Exit */
+#exitDiv{
+    display: flex;
+    justify-content: start;
+    align-items: start;  
+    padding: 5pt;
+    padding-right: 9pt;  
+
+    background-color: #444444;
+    border-radius: 5pt;
+    width: 35pt;
+
+    margin: 15pt;
+    
+    margin-bottom: -35pt;
+}
+
+#exitIcon{
+    color: #ffffff;    
+    font-size: 20pt;
+}
+
+#exitIcon:hover{
+    color: #364aff;    
+}
+
+#ItemSectionBlank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    scale: 1.25;
+    
+    margin-top: 150pt;
+}
+
+#ItemDivBlank{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;            
+}
+
+.projectTextBk{
+    display: flex;
+    flex-direction: row;    
+    margin-top: 10pt;
+}
+
+.blankTitleDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+.titleA{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-right: 5pt;
+}
+
+.titleB{
+    display: flex;
+    flex-direction: row;            
+    justify-content: center;
+    align-items: center;      
+    margin-right: 5pt;
+}
+
+.line{
+    margin-top: 5pt;
+    margin-left: 5pt;
+    transform: scaleY(2);
+    user-select: none;
+}
+
+#BlankTxt{
+    margin-left: 5pt;    
+}
+
+.BlankTxt40{
+    width: 40pt;
+    margin-left: 5pt;
+}
+
+.BlankTxt70{
+    width: 70pt;
+    margin-left: 5pt;
+}
+
+.BlankTxt60{        
+    width: 60pt;
+    margin-left: 5pt;
+    margin-top: 0pt;
+}
+
+.pPlaceholder{    
+    display: flex;
+    justify-content: center;
+    align-items: center;      
+
+    width: 100pt;
+}
+
+.BlankDescription{
+    background-color: #444444;
+    padding-left: 15pt;
+    border-radius: 5pt;
+    padding-right: 15pt;
+    padding-top: 10pt;    
+}
+
+#BlankI{       
+    display: flex;
+    padding: 11pt;
+
+    background-color: #54585c;
+    border-radius: 50pt;    
+    margin-right: 10pt;
+}
+
+#BlankImg{
+    height: 150pt;
+    width: 150pt;
+    margin-top: 15pt;
+    background-color: #54585c4f;
+    border: 1px solid #54585c;    
+}

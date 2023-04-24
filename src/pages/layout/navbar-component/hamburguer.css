@@ -1,0 +1,36 @@
+.HamburguerNav{
+    background-color: #272727;
+    padding: 5pt;
+    margin: 5pt;    
+    margin-top: -1pt;
+    
+}
+
+#Toggle{
+    border: none;        
+}
+
+.navbar-toggler:focus,
+.navbar-toggler.activer,
+.navbar-toggler.icon:focus {    
+    box-shadow: none;
+}
+
+
+#HamIcon{
+    color: #fff;
+    font-size: 25pt;    
+}
+
+#HamIcon:active{
+    color: aquamarine
+}
+
+#NavbarList{
+    font-size: 15pt;
+}
+
+#NavbarList a:active{
+    color: aquamarine
+}
+

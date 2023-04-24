@@ -1,0 +1,52 @@
+.ModalProject{        
+    background-color: #333333;    
+
+    position: fixed;    
+    
+    top: -50pt;    
+    right: 70pt;
+                       
+    width: 950pt;
+    height: 660pt;
+            
+    scale: 0.75;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;        
+    }
+    100%{
+        opacity: 1;        
+    }
+}
+
+
+
+.Overblur{
+    background-color: #1a1a1a;    
+}
+
+/* Exit */
+#ModalExitDiv{
+    display: flex;
+    justify-content: start;
+    align-items: start;  
+    padding: 5pt;
+    padding-right: 9pt;  
+    
+    border-radius: 5pt;
+    width: 35pt;
+    margin: 15pt;    
+    margin-bottom: 50pt;
+}
+
+#exitIcon{
+    color: #ffffff;    
+    font-size: 20pt;
+}
+
+#exitIcon:hover{
+    color: #364aff;    
+}

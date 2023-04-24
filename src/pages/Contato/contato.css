@@ -1,0 +1,69 @@
+#contactSection{
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 280pt;
+}
+
+#allIcons{
+    display: flex;
+    flex-direction: column;    
+    user-select: none;
+
+    justify-content: center;
+    align-items: center;        
+    
+    row-gap: 5pt;
+}
+
+#IconDiv1{
+    display: flex;
+
+    gap: 25pt;
+}
+
+#IconDiv2{
+    display: flex;
+
+    gap: 25pt;
+}
+
+.contactIcon{
+    font-size: 35pt;    
+}
+
+.contactIcon:hover{
+    scale: 1.1;    
+}
+
+#iconTxt{
+    text-decoration: none;
+    color: aliceblue;     
+    font-size: 0pt;
+    transition: 1.5s;    
+}
+
+.iconTxtShow{
+    display: inline;
+    
+    user-select: none;
+    
+    color: aliceblue;    
+    text-decoration: none;
+    font-size: 20pt;
+    transition: 1.5s;
+
+}
+
+
+.tituloDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    
+    flex-direction: column;
+
+    margin-top: 50pt;
+    margin-bottom: 50pt;
+}

@@ -1,9 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
+// CSS
 import './navbar.css'
 
-function Barra() {
+function Barra() {  
   return (
   <div>
     <nav>
@@ -22,11 +23,6 @@ function Barra() {
             <span>Sobre Mim |</span> 
           </Link>          
         </li>            
-        <li>
-          <Link to="/experiencia" className="href">
-            <span>Experiência |</span>
-            </Link>
-        </li>
 
         <li>
           <Link to="/projetos" className="href">

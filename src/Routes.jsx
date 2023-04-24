@@ -3,20 +3,25 @@ import React from 'react'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 // Import das Paginas
+
+// Import da App
 import App from './App'
 
+// Inicio
 import Home from './pages/Home/Home'
 
+// Página Sobre
 import Sobre from './pages/Sobre/Sobre'
 
+// Projetos e Projeto
 import Projetos from './pages/Projetos/Projetos'
+import Projeto from './pages/Projetos/Projeto'
 
+// Contato
 import Contato from './pages/Contato/Contato'
 
-import Experiência from './pages/Experiencia/Experiencia'
-
 // Página de Error
-import Error from './Pages/Error/Error'
+import Error from './pages/Error/Error'
 
 const router = createBrowserRouter([
         {
@@ -33,24 +38,31 @@ const router = createBrowserRouter([
                 {
                     path: 'Sobre',
                     element: <Sobre />
-                },
-                // Projetos
-                {
-                    path: 'Projetos',
-                    element: <Projetos />
-                },
+                },                                                                             
                 // Contato        
                 {
                     path: 'Contato',
                     element: <Contato />
-                },
-                // Experiência
+                },                
+            ]
+        },
+
+            // Projetos
+        {
+            path: 'Projetos',
+            element: <Projetos />,
+            children: [
                 {
-                    path: 'Experiencia',
-                    element: <Experiência />
+                    path: ':id/:nome',
+                    element: <Projeto />
                 }
             ]
-        }
+        },
+
+        {
+            path: 'projeto/:id/:nome'  ,
+            element: <Projeto />
+        },
     ])
 
 function Routes() {        

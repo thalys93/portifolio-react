@@ -1,0 +1,75 @@
+#sectionError{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#error{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    
+    background-color: #2e2e2e;
+    
+    margin-top: 100pt;
+    margin-left: 350pt;  
+    margin-right: 350pt;
+    padding: 50pt;
+
+    color: aliceblue;
+    border-radius: 50pt;    
+
+    animation: borderLight 3s infinite alternate;
+}
+
+@keyframes borderLight {
+    from {
+        border: 1pt solid #2e2e2e;        
+    }
+    to {
+        border: 1pt solid #8d3939;        
+    }
+    
+}
+
+#errorbtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5pt;
+    flex-direction: row;
+            
+    font-size: 19pt;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    
+}
+
+#errorbtn p {
+    margin-bottom: 1pt;
+    font-size: 18pt;
+}
+
+#spanError{    
+    font-size: 20pt;    
+}
+
+.ButtonsError{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30pt;
+}
+
+.toastContainer{
+    margin-top: 15pt;
+    user-select: none;
+}
+
+
+

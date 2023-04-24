@@ -1,0 +1,76 @@
+.SobreSection{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+
+    margin-bottom: 150pt;
+}
+
+#photo{
+    display: flex;
+    justify-content: start;
+    align-items: center;    
+
+    margin-left: 80pt;    
+    margin-top: 150pt;
+
+}
+
+#photo img {
+    border: none;
+    border-radius: 20pt 20pt 30pt 30pt;
+    width: 200pt
+}
+
+#TituloDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20pt;  
+    user-select: none;  
+}
+
+#TxtDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;      
+    user-select: none;
+    
+    margin-left: 150pt;
+    margin-right: 150pt;
+}
+
+#TxtDiv>p {
+    font-family: 'Roboto', sans-serif;    
+    font-size: 14pt;    
+}
+
+.atelie{
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.atelie:hover{
+    color: #f9ffc7;
+}
+
+.TitTxtDiv{
+    display: flex;
+    flex-direction: column;
+    margin-top: 60pt;
+}
+
+#htmlTxt:hover{
+    color: #E34F26;    
+}
+
+#reactTxt:hover{
+    color: #61DAFB;    
+}
+
+#angularTxt:hover{
+    color: #DD0031;    
+}
