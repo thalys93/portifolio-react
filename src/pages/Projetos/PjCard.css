@@ -38,14 +38,10 @@
     user-select: none;
 }
 
-.projectLink{
+#projectLink{
     font-family: 'Roboto', sans-serif;    
 }
 
-.projectLink:hover{
-    color: #364aff;
-    
-}
 
 
 #github{
