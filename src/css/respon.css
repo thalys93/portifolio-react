@@ -1,5 +1,34 @@
 /* Desktop */
 @media only screen and (min-width: 1024px) {   
+
+    /* página de error */
+
+    .sectionError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50pt;        
+    }
+
+    #error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;      
+        
+        margin-left: 5pt;
+        margin-right: 5pt;
+    }
+
+    .ButtonsError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+    }
+
     /* Barra de Navegação */
     #navUL{
         display: flex;
@@ -168,6 +197,33 @@
 /* Tablets */
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
 
+    /* página de error */
+
+    .sectionError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50pt;        
+    }
+
+    #error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;      
+        
+        border-radius: 0;
+    }
+
+    .ButtonsError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+    }
+
     /* Barra de Nav */
     #navUL{
         display: flex;
@@ -262,6 +318,33 @@
 
 /* Mobile */
 @media only screen and (max-width: 767px) {
+
+    /* página de error */
+
+    .sectionError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50pt;        
+    }
+
+    #error{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; 
+        text-align: center;      
+        
+        border-radius: 0;
+    }
+
+    .ButtonsError{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;        
+    }
 
     /* Barra de Navegação */
     #navUL{
@@ -459,18 +542,31 @@
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        text-align: center;
+        text-align: center;        
+        margin-top: 100pt;        
 
-        scale: 0.9;           
-                                         
+        scale: 1;                                                    
     }
+
+    #ItemSection h3{
+        text-decoration: underline;
+    }        
+
+    #ItemSection p{
+        font-size: 15pt;        
+
+        padding-left: 80pt;
+        padding-right: 80pt;
+    }
+
+
 
     #prodMain{
         display: flex;        
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-        
+                
         margin-bottom: 50pt;                
         margin-left: 110pt;        
 
@@ -483,12 +579,12 @@
         justify-content: center;
         align-items: center;
 
-        scale: 0.68;           
+        scale: 0.5;           
         border-radius: 0;
 
-        padding-left: 10pt;
-                        
-        margin-top: -45pt;
+        padding-left: 10pt;                        
+
+        margin-top: -35pt;        
     }
 
     #exitDiv{

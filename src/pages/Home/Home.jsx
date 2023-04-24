@@ -10,6 +10,10 @@ import { SiJavascript } from 'react-icons/si'
 let PerfImg = '/img/me.jpg'
 
 function Home() {
+
+  document.title = 'Luis Thalys RX - Página Inicial'
+  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-casa-16_nutbqc.png';
+
   return (
     <section className='HomeSection'>
       <div id='FigureDiv'>

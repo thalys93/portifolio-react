@@ -114,7 +114,7 @@ function Projeto () {
     <p> {Pjdata.data?.attributes.sobre}</p>
     <a href={Pjdata.data?.attributes.link} target="_blank" className="projectLink"> <FaGithub id="github"/> | Link do Projeto </a>    
       </div>
-        <hr />
+              
       <div >
         <img src={Pjdata.data?.attributes.image.data.attributes.url}                      
              alt={Pjdata.data?.attributes.image.data.attributes.name}

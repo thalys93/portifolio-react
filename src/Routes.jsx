@@ -21,7 +21,7 @@ import Projeto from './pages/Projetos/Projeto'
 import Contato from './pages/Contato/Contato'
 
 // Página de Error
-import Error from './Pages/Error/Error'
+import Error from './pages/Error/Error'
 
 const router = createBrowserRouter([
         {

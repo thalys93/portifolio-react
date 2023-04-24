@@ -15,10 +15,10 @@ function Pjmodal() {
     const [mostrarModal, setMostrarModal] = useState(false);
 
     const AbrirModal = () => setMostrarModal(true);
-    const FecharModal = () => setMostrarModal(false);
+    const FecharModal = () => setMostrarModal(false);    
 
     
-  return (
+  return (    
     <div>
         <button onClick={AbrirModal} id="modalButtonD" className='btn btn-outline-light'>Saiba Mais</button>
 

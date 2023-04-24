@@ -28,6 +28,9 @@ function ProjectCard() {
         } catch (error){
           console.error('Falha ao buscar dados da API', error);
         }
+      setTimeout(() => {
+        setLoading(false);          
+      }, 1500);  
       };
       fetchEmptyData();
     }, []);                
@@ -44,9 +47,6 @@ function ProjectCard() {
         }
       };
       fetchData();               
-    setTimeout(() => {
-      setLoading(false);          
-    }, 1500);     
     }, []);
 
   return (
