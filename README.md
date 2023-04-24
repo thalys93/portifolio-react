@@ -5,7 +5,7 @@
  
  - 🟨 Banco de dados **PostGreeSQL**
  
- **Em fase de Produção (postado na internet) ** 
+ **Em fase de Produção (postado na internet)** 
 
 ## Branch de Produção
 - Link do Firebase : https://portifolio-luis-thalys.web.app/
