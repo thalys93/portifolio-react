@@ -39,12 +39,11 @@
 }
 
 .projectLink{
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;    
 }
 
 .projectLink:hover{
     color: #364aff;
-
     
 }
 
@@ -78,17 +77,6 @@
 
 #exitIcon:hover{
     color: #364aff;    
-}
-
-
-#ProjectLink{
-    background-color: #444444;
-    border-radius: 5pt;
-
-    padding-top: 5pt;
-    padding-bottom: 5pt;
-    padding-right: 10pt;
-    padding-left: 5pt;
 }
 
 #ItemSectionBlank{
