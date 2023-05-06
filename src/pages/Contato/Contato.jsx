@@ -76,7 +76,7 @@ function Contato() {
 
         <figure className='curriculumFig' onClickCapture={CMouseClickIconTxt}>
           <IoIosPaper className='contactIcon'/>
-          <a id={CiconTxt ? 'iconTxt' : 'iconTxtShow'} href='https://drive.google.com/file/d/1W_zjeD_Y71gN601QaniT4Bt_4SJ4W7Lt/view?usp=sharing' target='_blank'> Meu Currículo </a>
+          <a id={CiconTxt ? 'iconTxt' : 'iconTxtShow'} href='https://drive.google.com/file/d/1JaU5hpEKFtEvFQ61P_qj0Xy4yu3uPNne/view?usp=share_link' target='_blank'> Meu Currículo </a>
         </figure>
       </div>
     </div>
