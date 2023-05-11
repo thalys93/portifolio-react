@@ -84,7 +84,7 @@ function ProjectCard() {
           {/* Desktop Modal */}
             <Link 
                 to={pj.id +'/'+ pj.attributes.nomespace}                
-                preventScrollReset={true}>            
+                preventScrollReset={true}>   
             <Pjmodal/>                                           
             </Link>
 
