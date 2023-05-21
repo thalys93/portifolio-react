@@ -12,8 +12,6 @@ import './css/global.css'
 import './css/fonts.css'
 import './css/respon.css'
 
-
-
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <Routes/>

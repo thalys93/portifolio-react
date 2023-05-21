@@ -4,18 +4,20 @@ import React from 'react'
 import './home.css'
 import  { FaHtml5, FaCss3Alt, FaAngular, FaReact} from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si'
+import { Helmet } from 'react-helmet';
 
 
 // Imagens
 let PerfImg = '/img/me.jpg'
 
-function Home() {
-
-  document.title = 'Luis Thalys RX - Página Inicial'
-  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-casa-16_nutbqc.png';
+function Home() {    
 
   return (
     <section className='HomeSection'>
+      <Helmet>
+        <title> Luis Thalys RX - Página Inicial </title>
+        <link rel="icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-casa-16_nutbqc.png" />
+      </Helmet>
       <div id='FigureDiv'>
         <figure className='animate__animated animate__fadeIn' id="perfFig">
         <img src={PerfImg}/>
