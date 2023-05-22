@@ -7,13 +7,15 @@ import { Outlet } from 'react-router-dom'
 
 function App() {
   return (    
-    <main>        
-      <Navbar />
-        <div>
-          <Outlet />                             
-        </div>
-      <Footer />
-    </main>
+    <>        
+    <Navbar/>
+      <main>
+        <Outlet />                             
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
     
   )
 }

@@ -6,12 +6,11 @@ import { Toast, ToastContainer } from 'react-bootstrap'
 
 // CSS
 import './error.css'
+import { Helmet } from 'react-helmet'
 
 
 
-function Error() {
-  document.title = 'Ops Algo deu Errado!'
-    document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682364473/portifolio.dev/icons8-erro-16_dvxo8h.png'
+function Error() {  
 
   const lordStyle = {
     width:'120px',
@@ -19,7 +18,6 @@ function Error() {
 }
 
 const [mostrarError, setMostrarError] = useState(false)
-
 const toggleError  = () => setMostrarError(!mostrarError)
 
 useEffect(() => {
@@ -29,6 +27,10 @@ useEffect(() => {
 
   return (
     <section className='sectionError'>   
+      <Helmet>
+        <title> Ops Algo deu Errado! </title>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682364473/portifolio.dev/icons8-erro-16_dvxo8h.png" type="image/x-icon" />
+      </Helmet>
             <div id="error">
                 <h1> Ops!  </h1>
                 <h2> Algo deu Errado! </h2>  

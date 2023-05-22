@@ -1,4 +1,5 @@
 import React from 'react'
+import { Helmet } from 'react-helmet'
 
 // CSS
 import './sobre.css'
@@ -6,12 +7,15 @@ import './sobre.css'
 // Imagens
 let Me2 = "/img/me2.jpg"
 
-function Sobre() {
-  document.title = 'Luis Thalys RX - Sobre Mim'
-  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-usu%C3%A1rio-16_mi3fki.png'
-
+function Sobre() {  
+    
   return (
     <section className="SobreSection">
+
+      <Helmet>
+        <title>Luis Thalys RX - Sobre Mim</title>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-usu%C3%A1rio-16_mi3fki.png" type="image/x-icon" />
+      </Helmet>
 
       <div id="photo">
         <img src={Me2} className='animate__animated animate__fadeInLeftBig'/>

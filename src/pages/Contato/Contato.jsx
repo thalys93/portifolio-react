@@ -7,6 +7,7 @@ import { IoLogoWhatsapp, IoIosPaper } from 'react-icons/io'
 
 // CSS
 import './contato.css'
+import { Helmet } from 'react-helmet';
 
 function Contato() {  
 
@@ -31,15 +32,15 @@ function Contato() {
 
 
   const [CiconTxt, setCiconTxt] = useState(true)
-  const CMouseClickIconTxt = () => {setCiconTxt(!CiconTxt)}
-
-  document.title = 'Luis Thalys RX - Contato'
-  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362903/portifolio.dev/icons8-telefone-16_kyuhcm.png';
-  
+  const CMouseClickIconTxt = () => {setCiconTxt(!CiconTxt)}      
 
   return (
     <section id='contactSection'>
-
+      <Helmet>
+        <title>Luis Thalys RX - Contato </title>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362903/portifolio.dev/icons8-telefone-16_kyuhcm.png" type="image/x-icon" />
+      </Helmet>
+      
       <div className='tituloDiv'>
         <h3>Minhas Redes Sociais </h3>
         <span> Clique nos Icones</span>

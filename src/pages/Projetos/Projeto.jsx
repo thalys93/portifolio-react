@@ -13,11 +13,13 @@ import { FaGithub } from "react-icons/fa";
 // CSS
 import './PjCard.css'
 import './modalUtils.css'
+import { Helmet } from "react-helmet";
 
 
 function Projeto (PjData) {
   // Nested Routes
     const {id} = useParams() ;
+    const {namespace} = useParams() ;
     
   // apiID do Projeto
     const [loading, setLoading] = useState(true);
@@ -47,6 +49,9 @@ function Projeto (PjData) {
     
     return(    
       <main id="prodMain" >
+        <Helmet>
+          <title> Projeto - {namespace} </title>
+        </Helmet>
       
               <div id="exitDiv">
                 {/* Mobile */}

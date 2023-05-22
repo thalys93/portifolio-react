@@ -46,11 +46,11 @@ function Barra() {
   return (
   <div>
     <nav>
-      <ul id="navUL">
+      <ul className='list-group' id="navUL">
         <div id="HomeDiv">
         <li>
           <Link to="/" className="href">
-            <span>Inicio</span>
+            <span className='m-3'>Inicio</span>
           </Link>
         </li>
         </div>
@@ -58,20 +58,22 @@ function Barra() {
         <div id="LinksDiv">
         <li>
           <Link to="/sobre" className="href">
-            <span>Sobre Mim |</span> 
+            <span className='text-center m-2'>Sobre Mim</span>
           </Link>          
+            |
         </li>            
 
-        <li>
-          <Link to="/projetos" className="href">
-            <span>Projetos |</span>
-            </Link>
+        <li id='disabledItem'>
+          {/* <Link to="/projetos" className="href text-secondary"> */}
+            <span className='text-center href text-secondary m-2'>Projetos</span>
+          {/* </Link> */}
+            |
         </li>
 
         <li>
           <Link to="/contato" className="href">
-            <span>Contato |</span>
-            </Link>
+            <span className='text-center m-2'>Contato</span>
+            </Link>            
         </li>
         
           <Dropdown>
