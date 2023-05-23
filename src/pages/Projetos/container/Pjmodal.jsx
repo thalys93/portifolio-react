@@ -1,14 +1,14 @@
-// React, Modal, Link
+// Libs
 import React, { useState } from 'react'
 import { Modal, ModalBody, ModalTitle } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-// Import do Card do Projeto
-import Projeto from './Projeto';
+// Componentes
+import Projeto from '../Projeto';
 
 // CSS
-import './projects.css'
-import './modalUtils.css'
+import '../css/projects.css'
+import '../css/modalUtils.css'
 
 function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
 
