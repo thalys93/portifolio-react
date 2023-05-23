@@ -27,16 +27,3 @@ export const apiId = async (id) => {
         throw error;
     }
 }
-
-// Tips 
-const TipsUrl = 'https://strapi-production-6edf.up.railway.app/api/tips';
-
-export const apiTips = async () => {
-    try{
-        const response = await axios.get(TipsUrl);
-        return response.data
-    }catch(error){
-        console.error('Falha ao buscar Dados na Api', error);
-        throw error;            
-    }
-}

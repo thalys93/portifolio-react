@@ -1,33 +1,80 @@
+// Bibliotecas e Utils
 import  React from 'react'
+import { ProjectUtils } from '../../services/projectsUtils/projectUtils'
 
 
+// Componentes
 import Footer from '../layout/footer-component/Footer';
-
 import Navbar from '../layout/navbar-component/Navbar';
 import ProjectCard from './ProjectCard';
+import LoadingCircle from '../layout/loading-component/Loading'
+
 
 // CSS
 import './projects.css'
+import { Helmet } from 'react-helmet';
 
 function Projetos() {
 
-  document.title = 'Luis Thalys RX - Meus Projetos'
-  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362918/portifolio.dev/icons8-lista-de-ingredientes-16_a8j5ju.png'
+  const {carregou, contador, projetos} = ProjectUtils();
 
+
+  if(!carregou) {
+    return(
+      <>
+        <Helmet>
+          <title>Carregando Projetos</title>
+          <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362918/portifolio.dev/icons8-lista-de-ingredientes-16_a8j5ju.png" type="image/x-icon" />
+        </Helmet>
+        <Navbar />
+        <section id='projectSection' className='text-center'>          
+          <div>
+            <h3> Aguarde Carregando..</h3>
+            <LoadingCircle/>
+            <span className='text-secondary animate__animated animate__fadeIn'> loading...</span>
+          </div>
+        </section>
+      </>
+    )
+  } else {
   return (    
-    <main id='projectMain'>
+    <>
+      <Helmet>
+        <title>Luis Thalys RX - Meus Projetos</title>
+        <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362918/portifolio.dev/icons8-lista-de-ingredientes-16_a8j5ju.png" type="image/x-icon" />
+      </Helmet>
+
       <Navbar />
       <section id="projectSection">
         <h3 id='mobileTitle'> Meus Projetos </h3>
-      <ol className='olProject'>                          
-        <ProjectCard />
+        <div className='overflow-y-auto overflow-x-hidden' id='listOverflow'>
+      <ol className='list-group list-group-horizontal gap-4 container break-line-list' id='ProjectList'> 
+      {projetos?.map((pj, index) => (
+        contador > index ? (
+      <>
+      <li key={index} className='animate__animated animate__fadeIn'>
+          <ProjectCard
+            id={pj.id}
+            nome={pj.nome}
+            nomespace={pj.nomespace}
+            imageURL={pj.imageURL}
+            sobre={pj.sobre}
+            link={pj.link}
+            tipo={pj.tipo}
+          />          
+      </li>
+      </>
+        ) : null
+      ))}
       </ol>
+      </div>
       </section>
         <div className='footerPJ'>
       <Footer/>      
         </div>
-    </main>
-  )
+    </>
+    )
+  }
 }
 
 export default Projetos

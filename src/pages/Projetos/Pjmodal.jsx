@@ -10,7 +10,7 @@ import Projeto from './Projeto';
 import './projects.css'
 import './modalUtils.css'
 
-function Pjmodal() {
+function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
 
     const [mostrarModal, setMostrarModal] = useState(false);
 
@@ -38,8 +38,15 @@ function Pjmodal() {
             </Link>                        
           </div>          
         </ModalTitle>                            
-          <ModalBody>            
-            <Projeto />
+          <ModalBody>
+            <Projeto
+              id={id}
+              nome={nome}
+              imageURL={imageURL}
+              sobre={sobre}
+              link={link}
+              tipo={tipo}
+            />
           </ModalBody>                    
         </Modal>
     </div>      

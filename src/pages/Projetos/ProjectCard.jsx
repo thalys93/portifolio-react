@@ -1,103 +1,60 @@
 // Import do React, Use State ,Use Effect , Link , Modal
-import React, { useState , useEffect} from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
-import { Placeholder, Button } from 'react-bootstrap';
-
-
-
-// Import dos Serviços da API
-import {apiProjects } from '../../services/api';
+import { Card, Image } from 'react-bootstrap';
 
 
 // Import do Modal
 import Pjmodal from './Pjmodal';
+import CardPlaceholder from './CardPlaceholder';
 
 // CSS
 import './projects.css'
 import './modalUtils.css'
 
 
-function ProjectCard() {      
-  // Card Vazio    
-    const [emptyCard, setEmptyCard] = useState([]);
-    useEffect(() => {
-      const fetchEmptyData = async () => {
-        try {
-          const data = await apiProjects();
-          setEmptyCard(data);
-        } catch (error){
-          console.error('Falha ao buscar dados da API', error);
-        }
-      setTimeout(() => {
-        setLoading(false);          
-      }, 1500);  
-      };
-      fetchEmptyData();
-    }, []);                
-    // Card Preenchido
-    const [PjData, setPjData] = useState([]);
-    const [loading, setLoading] = useState(true);      
-    useEffect(() => {  
-      const fetchData = async () => {
-        try {
-          const data = await apiProjects();
-          setPjData(data);
-        } catch (error){
-          console.error('Falha ao buscar dados da API', error);
-        }
-      };
-      fetchData();               
-    }, []);
 
-  return (
-    // Antes de Carregar
-    <ul id='pjList'>      
-    {loading ? 
-      emptyCard.data?.map(() => (        
-    <div id="pjListBlank" key={emptyCard.id}>          
-      <Placeholder animation="wave" id="pjCardBlank">    
-          <Placeholder as="h3" animation="glow" className="BlankH3">
-            <Placeholder style={{ width : '100pt' }} />
-          </Placeholder>   
+function ProjectCard({id, nome, nomespace, imageURL, sobre, link, tipo}) {
+  
+  const [loading, setLoading] = useState(false);
 
-        <div id='pjDetails'>
-          <div>
-        <Placeholder as='img' animation="glow" className="blankImg"/>                            
-          </div> 
-
-      <Placeholder animation="glow">
-        <Placeholder className="btn btn-outline-light" id="BlankButton" />
-      </Placeholder>
-
-        </div>
-      </Placeholder>
-      
-    </div>
-    )) : (      
-        PjData.data?.map((pj) => (          
-        <li id='pjCard' key={pj.id} className='animate__animated animate_fadeIn'>
-            <div id='pjTitle'>
-          <h3> Projeto : {pj.attributes.nome} </h3>           
-            </div>
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(true);
+    }, 210)
+  }, []);
+             
+  return (    
+    <>      
+    {loading ? (                      
+        <Card className='customColor' key={id}>
+          <Card.Header>          
+            <h3 className='user-select-none'> {nome} </h3>                     
+            <span className='text-center text-secondary user-select-none'> ({tipo}) </span>
+            <Image src={imageURL} height={50}/>
+          </Card.Header>
             <div id='pjDetails'>
-          <img src={pj.attributes.image.data.attributes.url } className="imgBk"/>                         
           {/* Desktop Modal */}
             <Link 
-                to={pj.id +'/'+ pj.attributes.nomespace}                
+                to={id +'/'+ nomespace}                
                 preventScrollReset={true}>   
-            <Pjmodal/>                                           
-            </Link>
-
-          {/* Mobile Option */}          
-          <Link to = { '/' + 'projeto' + '/' + pj.id +'/'+ pj.attributes.nomespace} className='btn btn-outline-light' id='LinkM'>
+            <Pjmodal
+            id={id}
+            nome={nome}
+            imageURL={imageURL}
+            sobre={sobre}
+            link={link}
+            tipo={tipo}
+            />
+            </Link>          
+          <Link to = { '/' + 'projeto' + '/' + id +'/'+ nomespace} className='btn btn-outline-light' id='LinkM'>
             Saiba Mais
           </Link>
-            </div>
-            <hr />
-        </li>
-        ))
-      )}  
-    </ul>
+            </div>            
+        </Card>
+    ) : ( <CardPlaceholder/> )          
+      }
+    </>
   )
 }
 
