@@ -1,142 +1,64 @@
-// React , Link, UseParams , Modal
+// Libs
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import { useParams } from "react-router-dom";
-import { Placeholder } from "react-bootstrap";
 
-// Services
-import { apiId } from "../../services/api";
+
+// Placeholders
+import ProjetoPlaceholder from './placeholder/ProjetoPlaceholder'
 
 // Icons
 import { FaGithub } from "react-icons/fa";
 
 // CSS
-import './PjCard.css'
-import './modalUtils.css'
-import { Helmet } from "react-helmet";
+import './css/PjCard.css'
+import './css/modalUtils.css'
 
+function Projeto ({nome, imageURL, sobre, link, tipo}) {
 
-function Projeto (PjData) {
-  // Nested Routes
-    const {id} = useParams() ;
-    const {namespace} = useParams() ;
-    
-  // apiID do Projeto
-    const [loading, setLoading] = useState(true);
-    const [Pjdata, setPjData] = useState([]);      
-    
+  const {id} = useParams()
 
-    useEffect(() => {                            
-        const fetchData = async () => {
-            try {
-                const data = await apiId(id);
-                setPjData(data);
-            } catch (error) {
-                console.error("Falha ao buscar dados da API", error);
-            }
-        };
-        fetchData();        
-        setTimeout(() => {
-        setLoading(false);
-        }, 1000);        
-    }, []);       
-
+  const [loading, setLoading] = useState(true);
+    useEffect(() => {
+      setTimeout(() => {
+        setLoading(false)
+      }, 210)
+    }, []);
+       
     const abrirLink = () => {
       const linkProjeto = document.getElementById('projectLink').getAttribute('href');
       window.open(linkProjeto, "_blank");
     };
-
     
     return(    
       <main id="prodMain" >
-        <Helmet>
-          <title> Projeto - {namespace} </title>
-        </Helmet>
-      
-              <div id="exitDiv">
-                {/* Mobile */}
-                <Link to="/projetos" id="exitLinkM" preventScrollReset={true}> 
-                  <i className="bi bi-box-arrow-left" id="exitIcon"/> 
-                </Link>
-              </div>  
-        
       {loading ? 
-        <section id="ItemSectionBlank">
-
-        <div className="blankTitleDiv">
-
-          <div className="titleA">
-          <Placeholder as='h3' animation="glow">
-            <Placeholder className="BlankTxt70"/>                         
-          </Placeholder>
-          </div>
-           
-          <div className="titleB">
-          <Placeholder as="h5" animation="glow">
-            <Placeholder className="BlankTxt40"/>            
-          </Placeholder>
-              <p className="line">|</p>
-          <Placeholder as="h5" animation="glow">           
-            <Placeholder            
-            className="BlankTxt40"/>          
-          </Placeholder>
-          </div>
-        </div>
-
-        <div className="BlankDescription">
-          
-            <Placeholder                      
-            animation="glow"          
-            as="p">
-            <Placeholder className="pPlaceholder" />            
-            </Placeholder>
-
-            <Placeholder                      
-            animation="glow"          
-            as="p">
-            <Placeholder className="pPlaceholder" />            
-            </Placeholder>
-
-            <Placeholder                      
-            animation="glow"          
-            as="p">
-            <Placeholder className="pPlaceholder" />            
-            </Placeholder>        
-
-        </div>
-          
-          <div className="projectTextBk">     
-          <i><Placeholder as="i" id="BlankI" animation="wave" /></i>       
-             
-             <p>|</p> 
-
-             <Placeholder as="p" animation="glow">
-              <Placeholder  className="BlankTxt60" />
-            </Placeholder>
-          </div>
-          <div>
-            <Placeholder as="img" id="BlankImg" animation="wave"/>            
-          </div>          
-        </section> : (
-      <section id="ItemSection">                       
-    <h3> {Pjdata.data?.attributes.nome} </h3>
-    <h5> Tipo de Projeto | {Pjdata.data?.attributes.tipo}</h5> 
-      <div className="projectText">
-    <p> {Pjdata.data?.attributes.sobre}</p>
-      
-          <a href={Pjdata.data?.attributes.link} target="_blank" onClick={abrirLink} id="projectLink" className="btn btn-outline-light"> <FaGithub id="github"/> | Link do Projeto </a>    
-      
+        <ProjetoPlaceholder/>
+       : (
+    <section id="ItemSection">      
+        <Helmet>
+          <title> {nome} </title>
+        </Helmet>
+      <div>
+        <h3> {nome} </h3>
+        <h5> Tipo de Projeto | {tipo}</h5> 
       </div>
-
-      <div >
-        <img src={Pjdata.data?.attributes.image.data.attributes.url}                      
-             alt={Pjdata.data?.attributes.image.data.attributes.name}
-             className="projectImg"
-        />
-      </div>
-      
+        <div className="projectText">
+          <p>{sobre}</p>      
+          <a 
+          href={link} 
+          target="_blank" 
+          onClick={abrirLink} 
+          id="projectLink" 
+          className="btn btn-outline-light"> 
+            <FaGithub id="github"/> | Link do Projeto 
+          </a>          
+        </div>
+      <div>
+        <img src={imageURL} className="projectImg"/>
+      </div>      
       </section>
-      )}
+        )}
       </main>        
     )
 }

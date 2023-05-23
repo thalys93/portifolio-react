@@ -13,7 +13,5 @@ import './css/fonts.css'
 import './css/respon.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
     <Routes/>
-  </React.StrictMode>,
 )

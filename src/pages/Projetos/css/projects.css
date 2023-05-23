@@ -3,7 +3,6 @@
     flex-direction: column;     
 }
 
-
 #pjList{    
     display: flex;
     flex-direction: row;    
@@ -36,25 +35,15 @@
     border-radius: 50pt;        
 }
 
-
-#pjCard{       
-    display: flex;
-    flex-direction: column;
-    
-    user-select: none;
+.customColor{
     background-color: #2e2e2e;
-    color: aliceblue;
-    padding: 10pt;    
-    border: #313131 solid 0.5pt;    
-    scale: 0.85;
-    margin-right: -25pt;
-    
-    list-style: none;
-    border-radius: 0pt 5pt 5pt 0pt;
-}
+    padding: 10pt;  
+    transition: 0.5s;
+}   
 
-#pjCard:hover{
-    scale: 0.87;
+.customColor:hover{
+    border: 0.5px solid aliceblue;
+    border-radius: 5pt;
 }
 
 #pjCardBlank{    
@@ -109,15 +98,6 @@
     
 }
 
-#pjTitle{
-    display: flex;
-    flex-direction: row;
-    gap: 45pt;
-
-    justify-content: center;
-    align-items: center;
-}
-
 #pjDetails{
     display: flex;
     flex-direction: column;    
@@ -128,15 +108,33 @@
     gap: 15pt;
 }
 
-.imgBk{    
-    height: 250pt;
-    margin-left: 20pt;
-    margin-right: 20pt;
-    border-radius: 5pt;    
-}
 
 .categoria{
     display: flex;
     justify-content: center;
+}
+
+.break-line-list {
+    display: flex;    
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;    
+    margin: 0;    
+    scale: 0.90;
+    height: 300pt;
+    overflow-y: hidden;
+    overflow-x: visible;
+}
+
+#listOverflow::-webkit-scrollbar {
+    width: 0.5em;    
+}
+
+#listOverflow::-webkit-scrollbar-track {
+    background-color: #ffffff;    
+}
+
+#listOverflow::-webkit-scrollbar-thumb {
+    background-color: #727272;    
 }
 

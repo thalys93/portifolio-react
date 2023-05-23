@@ -1,16 +1,16 @@
-// React, Modal, Link
+// Libs
 import React, { useState } from 'react'
 import { Modal, ModalBody, ModalTitle } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-// Import do Card do Projeto
-import Projeto from './Projeto';
+// Componentes
+import Projeto from '../Projeto';
 
 // CSS
-import './projects.css'
-import './modalUtils.css'
+import '../css/projects.css'
+import '../css/modalUtils.css'
 
-function Pjmodal() {
+function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
 
     const [mostrarModal, setMostrarModal] = useState(false);
 
@@ -38,8 +38,15 @@ function Pjmodal() {
             </Link>                        
           </div>          
         </ModalTitle>                            
-          <ModalBody>            
-            <Projeto />
+          <ModalBody>
+            <Projeto
+              id={id}
+              nome={nome}
+              imageURL={imageURL}
+              sobre={sobre}
+              link={link}
+              tipo={tipo}
+            />
           </ModalBody>                    
         </Modal>
     </div>      
