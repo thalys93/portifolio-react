@@ -5,54 +5,54 @@ import { Card, Image } from 'react-bootstrap';
 
 
 // Import do Modal
-import Pjmodal from './Pjmodal';
-import CardPlaceholder from './CardPlaceholder';
+import Pjmodal from './container/Pjmodal';
+import CardPlaceholder from './placeholder/CardPlaceholder';
 
 // CSS
-import './projects.css'
-import './modalUtils.css'
+import './css/projects.css'
+import './css/modalUtils.css'
 
-
-
-function ProjectCard({id, nome, nomespace, imageURL, sobre, link, tipo}) {
+function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, link, tipo}) {
   
+  // Simula um Carregamento
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setTimeout(() => {
       setLoading(true);
-    }, 210)
+    }, 500)
   }, []);
+
              
   return (    
     <>      
     {loading ? (                      
         <Card className='customColor' key={id}>
-          <Card.Header>          
-            <h3 className='user-select-none'> {nome} </h3>                     
+          <Card.Header>    
+            <div className='flex text-center mb-2'>
+            <h5 className='user-select-none'> {nome} </h5>                     
             <span className='text-center text-secondary user-select-none'> ({tipo}) </span>
-            <Image src={imageURL} height={50}/>
+            </div>
+            <Image src={projectIMG} height={160}/>            
           </Card.Header>
-            <div id='pjDetails'>
-          {/* Desktop Modal */}
+          <Card.Body> 
+            <div className='text-center'>          
             <Link 
                 to={id +'/'+ nomespace}                
                 preventScrollReset={true}>   
             <Pjmodal
             id={id}
             nome={nome}
-            imageURL={imageURL}
+            projectIMG={projectIMG}            
             sobre={sobre}
             link={link}
             tipo={tipo}
             />
-            </Link>          
-          <Link to = { '/' + 'projeto' + '/' + id +'/'+ nomespace} className='btn btn-outline-light' id='LinkM'>
-            Saiba Mais
-          </Link>
-            </div>            
+            </Link>            
+          </div>              
+          </Card.Body>
         </Card>
-    ) : ( <CardPlaceholder/> )          
+    ) : ( <CardPlaceholder/> )
       }
     </>
   )

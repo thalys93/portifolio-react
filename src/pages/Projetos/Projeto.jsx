@@ -1,65 +1,66 @@
 // React , Link, UseParams
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
-import ProjetoPlaceholder from './ProjetoPlaceholder'
+import ProjetoPlaceholder from './placeholder/ProjetoPlaceholder'
+import { Helmet } from "react-helmet";
 
 // Icons
 import { FaGithub } from "react-icons/fa";
 
 // CSS
-import './PjCard.css'
-import './modalUtils.css'
-import { Helmet } from "react-helmet";
+import './css/PjCard.css'
 
+function Projeto ({nome, projectIMG, sobre, link, tipo}) {
 
-function Projeto ({nome, imageURL, sobre, link, tipo}) {
-
-  const {id} = useParams()
   
-
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
       setTimeout(() => {
         setLoading(false)
-      }, 210)
+      }, 500)
     }, []);
-       
+
     const abrirLink = () => {
       const linkProjeto = document.getElementById('projectLink').getAttribute('href');
       window.open(linkProjeto, "_blank");
     };
     
     return(    
-      <main id="prodMain" >
+      <section className="ItemSection">
       {loading ? 
       <>
       <ProjetoPlaceholder/>
       </>
  : (
-      <section id="ItemSection">      
+      <article className="conteudo container-fluid">      
         <Helmet>
           <title> {nome} </title>
         </Helmet>
-    <h3> {nome} </h3>
-    <h5> Tipo de Projeto | {tipo}</h5> 
-      <div className="projectText">
-    <p>{sobre}</p>
-      
-          <a href={link} target="_blank" onClick={abrirLink} id="projectLink" className="btn btn-outline-light"> <FaGithub id="github"/> | Link do Projeto </a>    
-      
+
+      <div className="flex-column text-center">
+        <h3> {nome} </h3>
+        <h5> Tipo de Projeto | {tipo}</h5> 
       </div>
 
-      <div >
-        <img src={imageURL}        
-             className="projectImg"
-        />
+      <div className="projectText text-center">
+        <p>{sobre}</p>
       </div>
-      
-      </section>
+
+      <div className="text-center mb-3">
+      <a href={link} target="_blank" onClick={abrirLink} id="projectLink" className="btn btn-outline-light"> 
+        <FaGithub id="github"/> 
+        | Link do Projeto
+      </a>
+    </div>
+
+      <div className="text-center">
+        <img src={projectIMG} className='img-fluid' />
+      </div>      
+      </article>
+
       )}
-      </main>        
+      </section>        
     )
 }
 

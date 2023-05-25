@@ -1,18 +1,21 @@
-.ModalProject{        
-    background-color: #333333;    
+.ModalProject{     
+    display: flex;
+    justify-content: center;    
+    align-items: space-around;
+    margin: 0;
+    padding: 0;
 
+    background-color: #333333;    
     position: fixed;    
-    
-    top: -50pt;    
-    right: 70pt;
-                       
-    width: 950pt;
-    height: 660pt;
-            
+    right: 0;    
+    left: 0;
+        
     scale: 0.75;
+
     animation: fadeIn 1s;
 }
 
+/* Animação */
 @keyframes fadeIn{
     0%{
         opacity: 0;        
@@ -22,6 +25,7 @@
     }
 }
 
+/* Detalhe ao Abrir o Modal */
 .Overblur{
     background-color: #1a1a1a;    
 }
@@ -30,19 +34,14 @@
 #ModalExitDiv{
     display: flex;
     justify-content: start;
-    align-items: start;  
-    padding: 5pt;
-    padding-right: 9pt;  
-    
-    border-radius: 5pt;
-    width: 35pt;
-    margin: 15pt;    
-    margin-bottom: 50pt;
+    align-items: start;
+    padding: 5pt;            
+    margin: 10pt;
 }
 
 #exitIcon{
     color: #ffffff;    
-    font-size: 20pt;
+    font-size: 30pt;
 }
 
 #exitIcon:hover{

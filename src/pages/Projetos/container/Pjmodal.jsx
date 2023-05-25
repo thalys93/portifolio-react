@@ -10,7 +10,7 @@ import Projeto from '../Projeto';
 import '../css/projects.css'
 import '../css/modalUtils.css'
 
-function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
+function Pjmodal({id, nome, projectIMG, sobre, link, tipo}) {
 
     const [mostrarModal, setMostrarModal] = useState(false);
 
@@ -21,7 +21,6 @@ function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
   return (    
     <div>
         <button onClick={AbrirModal} id="modalButtonD" className='btn btn-outline-light'>Saiba Mais</button>
-
       <Modal  
         show={mostrarModal}        
         onHide={FecharModal}
@@ -29,7 +28,7 @@ function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
         contentClassName='ModalProject'
         scrollable={false}
         animation={false}
-        centered={true}        
+        centered={true}                
       > 
         <ModalTitle>
           <div id="ModalExitDiv">
@@ -42,8 +41,8 @@ function Pjmodal({id, nome, imageURL, sobre, link, tipo}) {
             <Projeto
               id={id}
               nome={nome}
-              imageURL={imageURL}
-              sobre={sobre}
+              projectIMG={projectIMG}
+              sobre={sobre}           
               link={link}
               tipo={tipo}
             />

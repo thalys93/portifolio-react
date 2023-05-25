@@ -1,8 +1,8 @@
 import React from 'react';
 import { Placeholder } from 'react-bootstrap';
 
-import './projects.css';
-import './modalUtils.css';
+import '../css/PjCard.css';
+import '../css/modalUtils.css';
 
 function CardPlaceholder() {
   return (

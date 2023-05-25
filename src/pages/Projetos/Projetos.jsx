@@ -11,7 +11,7 @@ import LoadingCircle from '../layout/loading-component/Loading'
 
 
 // CSS
-import './projects.css'
+import './css/projects.css'
 import { Helmet } from 'react-helmet';
 
 function Projetos() {
@@ -45,10 +45,10 @@ function Projetos() {
       </Helmet>
 
       <Navbar />
-      <section id="projectSection">
-        <h3 id='mobileTitle'> Meus Projetos </h3>
-        <div className='overflow-y-auto overflow-x-hidden' id='listOverflow'>
-      <ol className='list-group list-group-horizontal gap-4 container break-line-list' id='ProjectList'> 
+      <section className='container mt-5 align-items-center'>
+        <h3 className='text-center mb-5'> Meus Projetos </h3>
+        <div className='overflow-y-auto overflow-x-auto' id='listOverflow'>
+      <ol className='list-group list-group-horizontal list-group-numbered gap-4 container break-line-list' id='ProjectList'> 
       {projetos?.map((pj, index) => (
         contador > index ? (
       <>
@@ -57,7 +57,8 @@ function Projetos() {
             id={pj.id}
             nome={pj.nome}
             nomespace={pj.nomespace}
-            imageURL={pj.imageURL}
+            projectIMG={pj.projectIMG}
+            projectThumbnail={pj.projectThumbail}
             sobre={pj.sobre}
             link={pj.link}
             tipo={pj.tipo}
@@ -68,10 +69,7 @@ function Projetos() {
       ))}
       </ol>
       </div>
-      </section>
-        <div className='footerPJ'>
-      <Footer/>      
-        </div>
+      </section>                         
     </>
     )
   }
