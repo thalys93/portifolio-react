@@ -6,8 +6,8 @@
     
 }
 
-#Toggle{
-    border: none;        
+.Toggle{
+    border: none;
 }
 
 .navbar-toggler:focus,
@@ -17,20 +17,22 @@
 }
 
 
-#HamIcon{
+.HamIcon{
     color: #fff;
-    font-size: 25pt;    
+    font-size: 25pt;
 }
 
 #HamIcon:active{
     color: aquamarine
 }
 
-#NavbarList{
+.NavbarList{
     font-size: 15pt;
 }
 
-#NavbarList a:active{
+.NavbarList a:active{
     color: aquamarine
 }
+
+
 
