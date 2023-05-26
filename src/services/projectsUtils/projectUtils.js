@@ -12,13 +12,13 @@ export function ProjectUtils() {
     useEffect(() => {
         setTimeout(() => {
             setCarregou(true)
-        } , 500)
+        } , 310)
 
         if(carregou) {
             const timer = setInterval(() => {
                 setContador((contador) => contador + 1);                
                 projetos;
-            }, 500);
+            }, 310);
 
             return() => {
                 clearInterval(timer);
