@@ -114,16 +114,16 @@
     user-select: none;
 }
 
-@media only screen and (max-width:768px ) {
+@media only screen and (min-width:320px) and (max-width:768px ) {
     .HomeSection{  
         position: relative;
-        top: 10pt;                
-            
+        top: 0pt;                        
+        text-align: center;
 }
 }
 
 .HomeSection{
-    margin-top: 150pt;    
-    margin-bottom: 80pt;       
+    margin-top: 80pt;
+    margin-bottom: 10%;     
 }
 
