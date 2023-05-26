@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom';
 import { Card, Image } from 'react-bootstrap';
+import { ProjectUtils } from '../../services/projectsUtils/projectUtils';
 
 
 // Import do Modal
@@ -12,10 +13,11 @@ import CardPlaceholder from './placeholder/CardPlaceholder';
 import './css/projects.css'
 import './css/modalUtils.css'
 
-function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, link, tipo}) {
+function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, link, tipo, color}) {
   
   // Simula um Carregamento
   const [loading, setLoading] = useState(false);
+  
 
   useEffect(() => {
     setTimeout(() => {
@@ -23,7 +25,6 @@ function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, 
     }, 500)
   }, []);
 
-             
   return (    
     <>      
     {loading ? (                      
@@ -31,7 +32,7 @@ function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, 
           <Card.Header>    
             <div className='flex text-center mb-2'>
             <h5 className='user-select-none'> {nome} </h5>                     
-            <span className='text-center text-secondary user-select-none'> ({tipo}) </span>
+            <span className='text-center user-select-none' style={{color: color}}> ({tipo}) </span>
             </div>
             <Image src={projectIMG} height={160}/>            
           </Card.Header>
@@ -47,6 +48,7 @@ function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, 
             sobre={sobre}
             link={link}
             tipo={tipo}
+            color={color}        
             />
             </Link>            
           </div>              

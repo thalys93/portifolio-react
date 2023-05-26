@@ -6,11 +6,10 @@ import ReactDOM from 'react-dom/client'
 import Routes from './Routes'
 
 // Estilos Globais
-import 'react-tooltip/dist/react-tooltip.css'
 import 'animate.css'
+import 'react-tooltip/dist/react-tooltip.css'
 import './css/global.css'
 import './css/fonts.css'
-import './css/respon.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <Routes/>

@@ -10,7 +10,7 @@ import Projeto from '../Projeto';
 import '../css/projects.css'
 import '../css/modalUtils.css'
 
-function Pjmodal({id, nome, projectIMG, sobre, link, tipo}) {
+function Pjmodal({id, nome, projectIMG, sobre, link, tipo, color}) {
 
     const [mostrarModal, setMostrarModal] = useState(false);
 
@@ -45,6 +45,7 @@ function Pjmodal({id, nome, projectIMG, sobre, link, tipo}) {
               sobre={sobre}           
               link={link}
               tipo={tipo}
+              color={color}            
             />
           </ModalBody>                    
         </Modal>

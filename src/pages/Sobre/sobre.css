@@ -1,53 +1,83 @@
 .SobreSection{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center; 
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;   
+    margin-bottom: 7%;
+    margin-top: 3%;
 
-    margin-bottom: 150pt;
+    transition: 0.5s;
 }
 
-#photo{
-    display: flex;
-    justify-content: start;
-    align-items: center;    
+/* Response (media queries) */
+@media only screen and (max-width : 480px) {
 
-    margin-left: 80pt;    
-    margin-top: 150pt;
+    .SobreSection{
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;   
+    margin-bottom: 7%;
+    margin-top: 20%;
+    }
+
+    .mobileTxtChange{
+        text-align: center;
+        transition: 0.5s;
+    }
+}
+    
+
+@media only screen and (min-width: 768px) {
+    .imgArticle{        
+        margin-left: 15pt;
+    }
+
+    .SobreSection{
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;   
+    margin-bottom: 7%;
+    margin-top: 20%;
+    }
+
+    .mobileTxtChange{
+        text-align: start;
+        transition: 0.5s;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+.SobreSection{
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;   
+    margin-bottom: 7%;
+    margin-top: 10%;
+
+    transition: 0.5s;
+    }
 
 }
 
-#photo img {
+/* ////// */
+
+.photo{
     border: none;
     border-radius: 20pt 20pt 30pt 30pt;
     width: 200pt
 }
 
-#TituloDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20pt;  
-    user-select: none;  
-}
 
-#TxtDiv{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    align-items: end;      
-    user-select: none;
-    
-    margin-left: 150pt;
-    margin-right: 150pt;
-}
-
-#TxtDiv>p {
-    font-family: 'Roboto', sans-serif;    
+/* Titulos e Textos */
+.textArticle>p {     
     font-size: 14pt;    
 }
 
+
+/* Estilizações específicas */
 .atelie{
     text-decoration: none;
     color: aliceblue;
@@ -55,12 +85,6 @@
 
 .atelie:hover{
     color: #f9ffc7;
-}
-
-.TitTxtDiv{
-    display: flex;
-    flex-direction: column;
-    margin-top: 60pt;
 }
 
 #htmlTxt:hover{

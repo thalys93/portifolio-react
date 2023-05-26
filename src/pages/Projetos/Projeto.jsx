@@ -10,10 +10,10 @@ import { FaGithub } from "react-icons/fa";
 // CSS
 import './css/PjCard.css'
 
-function Projeto ({nome, projectIMG, sobre, link, tipo}) {
+function Projeto ({nome, projectIMG, sobre, link, tipo, color}) {
 
   
-    const [loading, setLoading] = useState(true);
+    const [loading, setLoading] = useState(true);    
 
     useEffect(() => {
       setTimeout(() => {
@@ -40,11 +40,11 @@ function Projeto ({nome, projectIMG, sobre, link, tipo}) {
 
       <div className="flex-column text-center">
         <h3> {nome} </h3>
-        <h5> Tipo de Projeto | {tipo}</h5> 
+        <h5 className="text-secondary-emphasis"> Tipo de Projeto | <span style={{color: color}}>{tipo}</span></h5> 
       </div>
 
       <div className="projectText text-center">
-        <p>{sobre}</p>
+        <p className="text-light">{sobre}</p>
       </div>
 
       <div className="text-center mb-3">

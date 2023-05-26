@@ -1,14 +1,5 @@
-.fotDetail{
-    display: flex;
-    justify-content: center;
-    align-items: center;            
-}
-
-.fotDetail span{
+.grayColor{
     color: #a5a5a58a;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.471);
-    text-align: center;
-
-
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.471);    
     user-select: none;
 }

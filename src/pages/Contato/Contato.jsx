@@ -38,49 +38,50 @@ function Contato() {
   
 
   return (
-    <section id='contactSection'>
+    <section className='contactSection'>
 
+<article className='contactArticle'>
       <div className='tituloDiv'>
         <h3>Minhas Redes Sociais </h3>
-        <span> Clique nos Icones</span>
+        <span className='text-light-emphasis'> Clique nos Icones</span>
       </div>
 
-    <div id='allIcons'>
-      <div id="IconDiv1">
-        <figure className='gitFig' onClickCapture={GMouseClickIconTxt}>
+    <div className='allIcons'>
+      <ol className="IconDiv1 list-group list-group-horizontal">
+        <li className='gitFig' onClickCapture={GMouseClickIconTxt}>
           <FaGithub className='contactIcon'/>
           <a id={GiconTxt ? 'iconTxt' : 'iconTxtShow'} href='http://github.com/thalys93/' target='_blank'> Acesse Meu Github </a>
-        </figure>
+        </li>
 
-        <figure className="linkFig" onClickCapture={LMouseClickIconTxt}>
+        <li className="linkFig" onClickCapture={LMouseClickIconTxt}>
           <FaLinkedin className='contactIcon'/>
           <a id={LiconTxt ? 'iconTxt' : 'iconTxtShow'} href='https://www.linkedin.com/in/luis-rodrigues202/' target='_blank'> Meu Perfil No Linkedin</a>
-        </figure>
+        </li>
 
-        <figure className='instaFig' onClickCapture={IMouseClickIconTxt} >
+        <li className='instaFig' onClickCapture={IMouseClickIconTxt} >
           <FaInstagram className='contactIcon'/>
           <a id={IiconTxt ? 'iconTxt' : 'iconTxtShow'} href='https://www.instagram.com/luiss_xavierr/' target='_blank'> Meu Instagram </a>
-        </figure>
-      </div>
+        </li>
+      </ol>
 
-      <div id="IconDiv2">
-        <figure className='emailFig' onClickCapture={EMouseClickIconTxt}>
+      <ol className="IconDiv2 list-group list-group-horizontal">
+        <li className='emailFig' onClickCapture={EMouseClickIconTxt}>
           <AiFillMail className='contactIcon'/>
           <a id={EiconTxt ? 'iconTxt' : 'iconTxtShow'} href='mailto:luisthalys1@hotmail.com,luisthalys@gmail.com' target='_blank'> Me Mande um Email</a> 
-        </figure>
+        </li>
 
-        <figure className='whatsFig' onClickCapture={WMouseClickIconTxt}>
+        <li className='whatsFig' onClickCapture={WMouseClickIconTxt}>
           <IoLogoWhatsapp className='contactIcon'/>
           <a id={WiconTxt ? 'iconTxt' : 'iconTxtShow'} href='https://wa.me/555191485593' target='_blank'> Me Mande uma Mensagem</a>
-        </figure>
+        </li>
 
-        <figure className='curriculumFig' onClickCapture={CMouseClickIconTxt}>
+        <li className='curriculumFig' onClickCapture={CMouseClickIconTxt}>
           <IoIosPaper className='contactIcon'/>
           <a id={CiconTxt ? 'iconTxt' : 'iconTxtShow'} href='https://drive.google.com/file/d/1oZg3J8Ru8UPD3Vazv1jcgFW7rKLbT5r0/view?usp=share_link' target='_blank'> Meu Currículo </a>
-        </figure>
-      </div>
+        </li>
+      </ol>
     </div>
-      
+  </article>
     </section>
   )
 }

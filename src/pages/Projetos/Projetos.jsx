@@ -4,7 +4,6 @@ import { ProjectUtils } from '../../services/projectsUtils/projectUtils'
 
 
 // Componentes
-import Footer from '../layout/footer-component/Footer';
 import Navbar from '../layout/navbar-component/Navbar';
 import ProjectCard from './ProjectCard';
 import LoadingCircle from '../layout/loading-component/Loading'
@@ -45,10 +44,11 @@ function Projetos() {
       </Helmet>
 
       <Navbar />
-      <section className='container mt-5 align-items-center'>
-        <h3 className='text-center mb-5'> Meus Projetos </h3>
-        <div className='overflow-y-auto overflow-x-auto' id='listOverflow'>
-      <ol className='list-group list-group-horizontal list-group-numbered gap-4 container break-line-list' id='ProjectList'> 
+
+      <section className='ProjectSection'>
+        <h3 className='text-center mb-5 text-decoration-underline'> Meus Projetos </h3>
+      <div className='overflow-y-auto overflow-x-auto container' id='listOverflow'>
+      <ol className='list-group list-group-horizontal list-group-numbered gap-4 container ProjectList'> 
       {projetos?.map((pj, index) => (
         contador > index ? (
       <>
@@ -58,10 +58,11 @@ function Projetos() {
             nome={pj.nome}
             nomespace={pj.nomespace}
             projectIMG={pj.projectIMG}
-            projectThumbnail={pj.projectThumbail}
+            projectThumbnail={pj.projectThumbail}            
             sobre={pj.sobre}
             link={pj.link}
             tipo={pj.tipo}
+            color={pj.cor}
           />          
       </li>
       </>

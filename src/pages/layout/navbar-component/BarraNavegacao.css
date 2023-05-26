@@ -1,9 +1,14 @@
 .HamburguerNav{
-    background-color: #272727;
-    padding: 5pt;
-    margin: 5pt;    
-    margin-top: -1pt;
-    
+    display: flex;    
+    background-color: #272727;    
+    margin-top: -5pt;    
+}
+
+.NavCollapse{    
+    font-family: 'Roboto' , sans-serif;
+    font-size: 20px;
+    transition: 0.5s;
+    justify-content: space-between;
 }
 
 .Toggle{
@@ -26,7 +31,7 @@
     color: aquamarine
 }
 
-.NavbarList{
+.NavbarList{        
     font-size: 15pt;
 }
 

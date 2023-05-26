@@ -16,7 +16,7 @@ export function ProjectUtils() {
 
         if(carregou) {
             const timer = setInterval(() => {
-                setContador((contador) => contador + 1);
+                setContador((contador) => contador + 1);                
                 projetos;
             }, 500);
 
@@ -26,10 +26,12 @@ export function ProjectUtils() {
         }
     }, [carregou]);
 
+        
+        
     return {        
         carregou,
         contador,
-        projetos,
+        projetos,        
     }
 
 }
