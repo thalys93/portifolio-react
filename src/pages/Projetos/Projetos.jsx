@@ -47,7 +47,7 @@ function Projetos() {
 
       <section className='ProjectSection'>
         <h3 className='text-center mb-5 text-decoration-underline'> Meus Projetos </h3>
-      <div className='overflow-y-auto overflow-x-auto container' id='listOverflow'>
+      <div className='overflow-y-auto overflow-x-auto container listOverflow'>
       <ol className='list-group list-group-horizontal list-group-numbered gap-4 container ProjectList'> 
       {projetos?.map((pj, index) => (
         contador > index ? (

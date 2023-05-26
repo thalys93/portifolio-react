@@ -131,15 +131,21 @@
     gap: 15pt;
 }
 
-#listOverflow::-webkit-scrollbar {
-    width: 0.5em;    
+.listOverflow::-webkit-scrollbar {    
+    height: 15px;
+    scrollbar-width: 25pt;
 }
 
-#listOverflow::-webkit-scrollbar-track {
-    background-color: #ffffff;    
+.listOverflow::-webkit-scrollbar-track {    
+    height: 10px;
+    background-color: aliceblue;    
+    border-radius: 10pt;         
 }
 
-#listOverflow::-webkit-scrollbar-thumb {
-    background-color: #727272;    
+
+.listOverflow::-webkit-scrollbar-thumb {    
+    border-radius: 10pt;
+    background-color: #727272;
+    
 }
 
