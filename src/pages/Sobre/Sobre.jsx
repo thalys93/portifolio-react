@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../../services/context/ThemeContext'
 
 // CSS
 import './sobre.css'
@@ -10,6 +11,8 @@ function Sobre() {
   document.title = 'Luis Thalys RX - Sobre Mim'
   document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-usu%C3%A1rio-16_mi3fki.png'
 
+  const {theme} = useContext(ThemeContext)
+
   return (
     <section className="SobreSection gap-4 flex-column flex-md-row">
 
@@ -20,7 +23,7 @@ function Sobre() {
       <article className='container textArticle me-5'>      
             <div className='TituloDiv text-center mb-3'>
               <h1 className='user-select-none'> Luis Thalys Rodrigues</h1>
-              <span className='text-light-emphasis user-select-none'> Quem Sou Eu?</span>
+              <span className={theme? 'text-dark user-select-none' : 'text-light-emphasis user-select-none'}> Quem Sou Eu?</span>
             </div>
             <div className='mobileTxtChange'>
         <p> Eu Sou um desenvolvedor <b>Front-end</b> com conhecimento
@@ -30,7 +33,7 @@ function Sobre() {
         <b id='angularTxt'> Angular </b> </p>
 
          <p> Especialista em desenvolvimento de aplicações web responsivas e interativas
-         Como Desenvolvedor do Site de Receitas<b><a href='https://cade-meu-rango-front.web.app' target='_blank' className='atelie'> Cadê Meu Rango</a></b>, 
+         Como Desenvolvedor do Site de Receitas<b><a href='https://cade-meu-rango-front.web.app' target='_blank' className={theme? 'text-dark bold' : 'text-light bold'}> Cadê Meu Rango</a></b>, 
          onde estou constantemente aprimorando         
          a Plataforma e trabalhando no desenvolvimento de novos recursos. </p>
 

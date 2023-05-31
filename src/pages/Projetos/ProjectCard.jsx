@@ -13,7 +13,7 @@ import CardPlaceholder from './placeholder/CardPlaceholder';
 import './css/projects.css'
 import './css/modalUtils.css'
 
-function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, link, tipo, color}) {
+function ProjectCard(props) {
   
   // Simula um Carregamento
   const [loading, setLoading] = useState(false);
@@ -28,27 +28,28 @@ function ProjectCard({id, nome, nomespace, projectIMG, projectThumbnail, sobre, 
   return (    
     <>      
     {loading ? (                      
-        <Card className='customColor' key={id}>
-          <Card.Header>    
-            <div className='flex text-center mb-2'>
-            <h5 className='user-select-none'> {nome} </h5>                     
-            <span className='text-center user-select-none' style={{color: color}}> ({tipo}) </span>
+        <Card className={props.tema? 'customColorD'  : 'customColor'} key={props.id}>
+          <Card.Header className='bg-emphasis'>    
+            <div className='flex text-center mb-1 mt-3'>
+              <h5 className='user-select-none'> {props.nome} </h5>                     
+              <span className={props.tema? 'text-center user-select-none text-dark' : 'text-center user-select-none'} style={{color: props.color}}> ({props.tipo}) </span>
             </div>
-            <Image src={projectIMG} height={160}/>            
           </Card.Header>
+            <Image src={props.projectIMG} height={160}/>            
           <Card.Body> 
             <div className='text-center'>          
             <Link 
-                to={id +'/'+ nomespace}                
+                to={props.id +'/'+ props.nomespace}                
                 preventScrollReset={true}>   
             <Pjmodal
-            id={id}
-            nome={nome}
-            projectIMG={projectIMG}            
-            sobre={sobre}
-            link={link}
-            tipo={tipo}
-            color={color}        
+            id={props.id}
+            nome={props.nome}
+            projectIMG={props.projectIMG}            
+            sobre={props.sobre}
+            link={props.link}
+            tipo={props.tipo}
+            color={props.color}  
+            tema={props.tema}      
             />
             </Link>            
           </div>              

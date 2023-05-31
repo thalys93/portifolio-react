@@ -55,48 +55,38 @@
     transition: 0.2s;    
 }
 
-.Html{
-    color: aliceblue;
-}
+.Html{color: aliceblue}
+.Html:hover{color: #E34F26;}
 
-.Html:hover{
-    color: #E34F26;
-}
+.HtmlD{color: #252525}
+.HtmlD:hover{color: #E34F26;}
 
-.Css{
-    color: aliceblue;
-}
+.Css{color:aliceblue}
+.Css:hover{color: #1572B6;}
+.CssD{color: #252525}
+.CssD:hover{color: #1572B6;}
 
-.Css:hover{
-    color: #1572B6;
-}
+.Javascript{color: aliceblue;}
+.Javascript:hover{color: #F7DF1E;}
 
-.Javascript{
-    color: aliceblue;
-}
+.JavascriptD{color: #252525}
+.JavascriptD:hover{color: #F7DF1E;}
 
-.Javascript:hover{
-    color: #F7DF1E;
-}
+.React{color: aliceblue;}
+.React:hover{color: #61DAFB;}
 
-.React{
-    color: aliceblue;
-}
-
-.React:hover{
-    color: #61DAFB;    
-}
-
-.Angular{
-    color: aliceblue;
-}
-
-.Angular:hover{
-    color: #DD0031;
-}
+.ReactD{color: #252525;}
+.ReactD:hover{color: #61DAFB;}
 
 
-#iconDetails{
+.Angular{color: aliceblue;}
+.Angular:hover{color: #DD0031}
+
+.AngularD{color: #252525;}
+.AngularD:hover{color: #DD0031}
+
+
+.iconDetails{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -109,7 +99,7 @@
     scale: 0.8;
 }
 
-#iconDetails span{
+.iconDetails span{
     font-size: 15pt;
     user-select: none;
 }

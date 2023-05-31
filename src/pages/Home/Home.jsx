@@ -1,8 +1,9 @@
 // Libs
-import React from 'react'
+import React, { useContext } from 'react'
 import  { FaHtml5, FaCss3Alt, FaAngular, FaReact} from 'react-icons/fa';
 import { SiJavascript } from 'react-icons/si'
 import { Helmet } from 'react-helmet';
+import { ThemeContext } from '../../services/context/ThemeContext';
 
 // CSS
 import './home.css'
@@ -11,6 +12,8 @@ import './home.css'
 let PerfImg = '/img/me.jpg'
 
 function Home() {    
+
+  const {theme} = useContext(ThemeContext)
 
   return (
     <section className='HomeSection'>
@@ -26,27 +29,27 @@ function Home() {
         <h2>Desenvolvedor Front End</h2>         
       </div>          
         <div id="iconsDiv" className='iconDiv'> 
-          <a id="iconDetails" className='Html' href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank'>
+          <a className={theme? 'iconDetails HtmlD' : 'iconDetails Html'} href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank'>
             <FaHtml5 className="icon"/>
-            <span id='Html'>HTML</span>            
+            <span>HTML</span>            
           </a>
 
-          <a id="iconDetails" className='Css' href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
+          <a className={theme? 'iconDetails CssD' : 'iconDetails Css'} href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">
           <FaCss3Alt className="icon"/>
           <span>CSS</span>
           </a>
 
-          <a id="iconDetails" className='Javascript' href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
+          <a className={theme? 'iconDetails JavascriptD' : 'iconDetails Javascript'} href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
           <SiJavascript className="icon"/>
           <span>Javascript</span>
           </a>
 
-          <a id="iconDetails" className='React' href="https://react.dev/" target="_blank">
+          <a className={theme? 'iconDetails ReactD' : 'iconDetails React'} href="https://react.dev/" target="_blank">
           <FaReact className="icon"/>
           <span>React</span>
           </a>
 
-          <a id="iconDetails" className='Angular' href="https://angular.io/" target="_blank">
+          <a className={theme? 'iconDetails AngularD' : 'iconDetails Angular'} href="https://angular.io/" target="_blank">
           <FaAngular className="icon" />
           <span>Angular</span>
           </a>

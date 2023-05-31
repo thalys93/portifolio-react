@@ -1,10 +1,9 @@
 import React from 'react'
-import './footer.css'
 
-function Footer() {
+function Footer(props) {
   return (
-    <footer className='text-center'>      
-        <span className='grayColor'> Copyright © Thalys 2023 </span>      
+    <footer className='text-center user-select-none'>      
+        <span className={props.tema? 'text-dark' : 'text-secondary' }> Copyright © Thalys 2023 </span>      
     </footer>
   )
 }

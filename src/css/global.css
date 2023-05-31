@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
 
-    transition: 0.21s;        
+    transition: 0.1s;
 }
 
 body{
     background-color: #252525;
-    background-image: url(../assets/img/wallpaper.png);    
+    background-image: url(../assets/img/wallpaper.png);
     background-size: 500pt;
     
     height: 100vh;
@@ -17,8 +17,20 @@ body{
     color: aliceblue;
 }
 
+.lightBody{
+    background-color: #c4c4c4;
+    background-image: url(../assets/img/wallpaper.png);
+    background-blend-mode: screen;
+    background-size: 500pt;
+    
+    height: 100vh;
+    box-sizing: border-box;    
+    scroll-behavior: smooth;
+
+    color: #252525;
+}
+
 a{
-    text-decoration: none;
-    color: aliceblue;    
+    text-decoration: none;    
 }
 

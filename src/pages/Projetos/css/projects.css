@@ -67,6 +67,19 @@
     border: aliceblue solid 0.5pt;
 }
 
+.customColorD{
+    display: flex;    
+
+    background-color: white;
+    padding: 10pt;
+
+    transition: 0.5s;
+}
+
+.customColorD:hover{
+    border: #2e2e2e solid 0.5pt;
+}
+
 
 /* CardBlank */
 #pjCardBlank{    

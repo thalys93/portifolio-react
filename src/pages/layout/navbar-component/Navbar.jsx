@@ -4,10 +4,11 @@ import React from 'react'
 // Importação das Barras
 import BarraNavegacao from './Barra'
 
-function Navbar() {
+function Navbar(props) {  
+
   return (
     <>      
-      <BarraNavegacao/>
+      <BarraNavegacao tema={props.tema}/>
     </>
   )
 }

@@ -10,7 +10,7 @@ import { FaGithub } from "react-icons/fa";
 // CSS
 import './css/PjCard.css'
 
-function Projeto ({nome, projectIMG, sobre, link, tipo, color}) {
+function Projeto (props) {
 
   
     const [loading, setLoading] = useState(true);    
@@ -35,27 +35,27 @@ function Projeto ({nome, projectIMG, sobre, link, tipo, color}) {
  : (
       <article className="conteudo container-fluid">      
         <Helmet>
-          <title> {nome} </title>
+          <title> {props.nome} </title>
         </Helmet>
 
       <div className="flex-column text-center">
-        <h3> {nome} </h3>
-        <h5 className="text-secondary-emphasis"> Tipo de Projeto | <span style={{color: color}}>{tipo}</span></h5> 
+        <h3> {props.nome} </h3>
+        <h5 className="text-secondary-emphasis"> Tipo de Projeto | <span className={props.tema? 'text-dark' : ''} style={{color: props.color}}>{props.tipo}</span></h5> 
       </div>
 
       <div className="projectText text-center">
-        <p className="text-light">{sobre}</p>
+        <p className={props.tema? 'text-dark' : "text-light"}>{props.sobre}</p>
       </div>
 
       <div className="text-center mb-3">
-      <a href={link} target="_blank" onClick={abrirLink} id="projectLink" className="btn btn-outline-light"> 
+      <a href={props.link} target="_blank" onClick={abrirLink} id="projectLink" className={props.tema? "btn btn-primary" : "btn btn-outline-light"}> 
         <FaGithub id="github"/> 
         | Link do Projeto
       </a>
     </div>
 
       <div className="text-center">
-        <img src={projectIMG} className='img-fluid' />
+        <img src={props.projectIMG} className='img-fluid' />
       </div>      
       </article>
 

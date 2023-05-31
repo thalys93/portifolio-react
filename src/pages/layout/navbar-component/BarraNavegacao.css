@@ -1,7 +1,10 @@
 .HamburguerNav{
-    display: flex;    
-    background-color: #272727;    
+    display: flex;      
     margin-top: -5pt;    
+}
+
+.CustomColor{
+    background-color: #252525;
 }
 
 .NavCollapse{    
@@ -24,6 +27,11 @@
 
 .HamIcon{
     color: #fff;
+    font-size: 25pt;
+}
+
+.HamIconDark{
+    color: #232323;
     font-size: 25pt;
 }
 

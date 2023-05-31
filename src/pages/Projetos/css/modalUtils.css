@@ -15,6 +15,24 @@
     animation: fadeIn 1s;
 }
 
+.ModalProjectD{
+    display: flex;
+    justify-content: center;    
+    align-items: space-around;
+    margin: 0;
+    padding: 0;
+
+    background-color: white;    
+    position: fixed;    
+    right: 0;    
+    left: 0;
+        
+    scale: 0.75;
+
+    animation: fadeIn 1s;
+
+}
+
 /* Animação */
 @keyframes fadeIn{
     0%{
