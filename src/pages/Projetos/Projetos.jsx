@@ -16,7 +16,7 @@ import './css/projects.css'
 
 function Projetos() {
 
-  const {carregou, contador, projetos} = ProjectUtils();    
+  const {carregou, contador, dados} = ProjectUtils();    
   const {theme} = useContext(ThemeContext)
 
     useEffect(() => {
@@ -58,7 +58,7 @@ function Projetos() {
         <h3 className='text-center mb-5 text-decoration-underline'> Meus Projetos </h3>
       <div className='overflow-y-auto overflow-x-auto container listOverflow'>
       <ol className='list-group list-group-horizontal list-group-numbered gap-4 container ProjectList'> 
-      {projetos?.map((pj, index) => (
+      {dados?.map((pj, index) => (
         contador > index ? (
       <>
       <li key={index} className='animate__animated animate__fadeIn'>
@@ -66,8 +66,7 @@ function Projetos() {
             id={pj.id}
             nome={pj.nome}
             nomespace={pj.nomespace}
-            projectIMG={pj.projectIMG}
-            projectThumbnail={pj.projectThumbail}            
+            projectIMG={pj.projectIMG}                     
             sobre={pj.sobre}
             link={pj.link}
             tipo={pj.tipo}

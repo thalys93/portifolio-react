@@ -1,9 +1,7 @@
 import axios from 'axios';
 
 // exportações da api
-
-const Projetos = 'https://strapi-production-6edf.up.railway.app/api/projetos?populate=*';
-const ProjetosId =  `https://strapi-production-6edf.up.railway.app/api/projetos/`;
+const Projetos = 'https://portifolio-backend-pauq.onrender.com/api/projetos';
 
 // projects (para visualização dos projetos)
 export const apiProjects = async () => {
@@ -16,14 +14,3 @@ export const apiProjects = async () => {
     }
 }
 
-
-// ID (para visualização do card com o id)
-export const apiId = async (id) => {
-    try{
-        const response = await axios.get(ProjetosId + id + "?populate=*");
-        return response.data
-    }catch(error){
-        console.error('Falha ao buscar Dados na Api', error);
-        throw error;
-    }
-}

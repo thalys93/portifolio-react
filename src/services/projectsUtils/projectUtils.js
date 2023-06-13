@@ -1,23 +1,32 @@
 import {useState, useEffect} from 'react'
-import { ProjectDados } from './dados';
-
+import { apiProjects } from '../api';
 
 export function ProjectUtils() {
         
     const [carregou, setCarregou] = useState(false);
     const [contador, setContador] = useState(0);
-
-    const {projetos} = ProjectDados()
-
+    const [dados, setDados] = useState([]);
+    
+    // Busca Dados na api
     useEffect(() => {
-        setTimeout(() => {
-            setCarregou(true)
-        } , 310)
+        const fetchData = async () => {
+            try {
+                const response = await apiProjects();
+                setDados(response);
+                setCarregou(true);
+            } catch (error) {
+                console.log(error);
+            }
+        };        
 
+        fetchData();
+    }, []);
+
+    // Animação de Carregamento
+    useEffect(() => {
         if(carregou) {
             const timer = setInterval(() => {
-                setContador((contador) => contador + 1);                
-                projetos;
+                setContador((contador) => contador + 1);                                
             }, 310);
 
             return() => {
@@ -31,7 +40,7 @@ export function ProjectUtils() {
     return {        
         carregou,
         contador,
-        projetos,        
+        dados,       
     }
 
 }

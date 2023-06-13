@@ -20,17 +20,17 @@ function Sobre() {
           <img src={Me2} className='photo'/>
       </article>
 
-      <article className='container textArticle me-5'>      
+      <article className='container textArticle pe-5'>      
             <div className='TituloDiv text-center mb-3'>
               <h1 className='user-select-none'> Luis Thalys Rodrigues</h1>
               <span className={theme? 'text-dark user-select-none' : 'text-light-emphasis user-select-none'}> Quem Sou Eu?</span>
             </div>
             <div className='mobileTxtChange'>
-        <p> Eu Sou um desenvolvedor <b>Front-end</b> com conhecimento
+        <p> Eu Sou um desenvolvedor <b>Web</b> com conhecimento
          Intermediário em 
          <b id='htmlTxt'> HTML </b>
          e Frameworks como : <b id='reactTxt'>React  </b> ,
-        <b id='angularTxt'> Angular </b> </p>
+        <b id='angularTxt'> Angular </b> </p>        
 
          <p> Especialista em desenvolvimento de aplicações web responsivas e interativas
          Como Desenvolvedor do Site de Receitas<b><a href='https://cade-meu-rango-front.web.app' target='_blank' className={theme? 'text-dark bold' : 'text-light bold'}> Cadê Meu Rango</a></b>, 

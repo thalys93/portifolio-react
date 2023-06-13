@@ -35,7 +35,7 @@ function ProjectCard(props) {
               <span className={props.tema? 'text-center user-select-none text-dark' : 'text-center user-select-none'} style={{color: props.color}}> ({props.tipo}) </span>
             </div>
           </Card.Header>
-            <Image src={props.projectIMG} height={160}/>            
+            <Image src={props.projectIMG} height={160} width={300}/>
           <Card.Body> 
             <div className='text-center'>          
             <Link 
@@ -44,7 +44,7 @@ function ProjectCard(props) {
             <Pjmodal
             id={props.id}
             nome={props.nome}
-            projectIMG={props.projectIMG}            
+            projectIMG={props.projectIMG}
             sobre={props.sobre}
             link={props.link}
             tipo={props.tipo}

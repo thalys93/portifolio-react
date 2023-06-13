@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import ProjetoPlaceholder from './placeholder/ProjetoPlaceholder'
 import { Helmet } from "react-helmet";
+import { Image } from "react-bootstrap";
 
 // Icons
 import { FaGithub } from "react-icons/fa";
@@ -55,7 +56,7 @@ function Projeto (props) {
     </div>
 
       <div className="text-center">
-        <img src={props.projectIMG} className='img-fluid' />
+        <Image src={props.projectIMG} height={350} width={550} className="img-fluid"/>
       </div>      
       </article>
 
