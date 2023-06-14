@@ -20,7 +20,7 @@ function Sobre() {
           <img src={Me2} className='photo'/>
       </article>
 
-      <article className='container textArticle pe-5'>      
+      <article className='container textArticle me-5'>      
             <div className='TituloDiv text-center mb-3'>
               <h1 className='user-select-none'> Luis Thalys Rodrigues</h1>
               <span className={theme? 'text-dark user-select-none' : 'text-light-emphasis user-select-none'}> Quem Sou Eu?</span>

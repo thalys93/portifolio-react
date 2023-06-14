@@ -27,7 +27,7 @@ export function ProjectUtils() {
         if(carregou) {
             const timer = setInterval(() => {
                 setContador((contador) => contador + 1);                                
-            }, 310);
+            }, 120);
 
             return() => {
                 clearInterval(timer);

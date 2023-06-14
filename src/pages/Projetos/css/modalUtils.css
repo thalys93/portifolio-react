@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
 
-    background-color: #333333;    
+    background-color: #333333;
     position: fixed;    
     right: 0;    
     left: 0;
@@ -21,8 +21,7 @@
     align-items: space-around;
     margin: 0;
     padding: 0;
-
-    background-color: white;    
+    background-color: white;
     position: fixed;    
     right: 0;    
     left: 0;
@@ -31,6 +30,37 @@
 
     animation: fadeIn 1s;
 
+}
+
+
+/* Celular Pequeno */
+@media (width: 320px) {
+    .ModalProject,
+    .ModalProjectD{         
+    margin: -5.5rem;    
+    width: 370pt;            
+    scale: 0.60;
+}
+};
+
+/* Celular Médio */
+@media (width: 375px){
+    .ModalProject,
+    .ModalProjectD{     
+    margin: -8rem; 
+    width: 450pt;    
+    scale: 0.60;
+}
+}
+
+/* Celular Maior */
+@media (width: 425px) {
+    .ModalProject,
+    .ModalProjectD{                         
+    margin: -5.5rem;    
+    width: 450pt;
+    scale: 0.60;
+}
 }
 
 /* Animação */

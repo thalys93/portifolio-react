@@ -39,7 +39,7 @@ function ProjectCard(props) {
           <Card.Body> 
             <div className='text-center'>          
             <Link 
-                to={props.id +'/'+ props.nomespace}                
+                to={props.id +'/'+ props.nomespace}
                 preventScrollReset={true}>   
             <Pjmodal
             id={props.id}
