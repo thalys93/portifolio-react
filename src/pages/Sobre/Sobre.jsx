@@ -3,18 +3,21 @@ import { ThemeContext } from '../../services/context/ThemeContext'
 
 // CSS
 import './sobre.css'
+import { Helmet } from 'react-helmet'
 
 // IMG
 let Me2 = "/img/me2.jpg"
 
-function Sobre() {
-  document.title = 'Luis Thalys RX - Sobre Mim'
-  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-usu%C3%A1rio-16_mi3fki.png'
+function Sobre() {    
 
   const {theme} = useContext(ThemeContext)
 
   return (
     <section className="SobreSection gap-4 flex-column flex-md-row">
+      <Helmet>
+        <title> Sobre Mim </title>
+        <link rel="icon" href="https://www.svgrepo.com/show/490949/people.svg" />
+      </Helmet>
 
       <article className='imgArticle'>        
           <img src={Me2} className='photo'/>

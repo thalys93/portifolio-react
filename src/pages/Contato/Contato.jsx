@@ -1,4 +1,5 @@
 import {React, useContext, useState} from 'react'
+import SobreUtils from '../../services/contactUtils/iconsStates'
 
 // React Icons
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
@@ -14,26 +15,21 @@ function Contato() {
 
 
   // Set States de Icons
-  const [GiconTxt, setIconTxt] = useState(true)
-  const GMouseClickIconTxt = () => {setIconTxt(!GiconTxt)}     
 
-  const [LiconTxt, setLiconTxt] = useState(true)
-  const LMouseClickIconTxt = () => {setLiconTxt(!LiconTxt)}     
-
-  const [IiconTxt, setIiconTxt] = useState(true)
-  const IMouseClickIconTxt = () => {setIiconTxt(!IiconTxt)}     
-
-
-  const [EiconTxt, setEiconTxt] = useState(true)
-  const EMouseClickIconTxt = () => {setEiconTxt(!EiconTxt)}
-
-
-  const [WiconTxt, setWiconTxt] = useState(true)
-  const WMouseClickIconTxt = () => {setWiconTxt(!WiconTxt)}
-
-
-  const [CiconTxt, setCiconTxt] = useState(true)
-  const CMouseClickIconTxt = () => {setCiconTxt(!CiconTxt)}
+  const {
+    GiconTxt, 
+    LiconTxt, 
+    IiconTxt, 
+    EiconTxt, 
+    WiconTxt, 
+    CiconTxt,
+    GMouseClickIconTxt, 
+    LMouseClickIconTxt, 
+    IMouseClickIconTxt, 
+    EMouseClickIconTxt, 
+    WMouseClickIconTxt, 
+    CMouseClickIconTxt
+  } = SobreUtils();
 
   const { theme } = useContext(ThemeContext)
   
@@ -42,8 +38,8 @@ function Contato() {
   <section className='contactSection'>
 
     <Helmet>
-      <title>Luis Thalys RX - Contato</title>
-      <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362903/portifolio.dev/icons8-telefone-16_kyuhcm.png" type="image/x-icon" />
+      <title>Contato</title>
+      <link rel="shortcut icon" href="https://www.svgrepo.com/show/444350/gui-contacts.svg" type="image/x-icon" />
     </Helmet>
 
 <article className='contactArticle'>

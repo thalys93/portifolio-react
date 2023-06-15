@@ -1,7 +1,7 @@
 // Libs
 import React, { useContext } from 'react'
 import  { FaHtml5, FaCss3Alt, FaAngular, FaReact, FaNodeJs} from 'react-icons/fa';
-import { SiAdonisjs, SiExpress, SiJavascript } from 'react-icons/si'
+import { SiAdonisjs, SiExpress, SiJavascript, SiMongodb } from 'react-icons/si'
 import { Helmet } from 'react-helmet';
 import { ThemeContext } from '../../services/context/ThemeContext';
 
@@ -18,8 +18,8 @@ function Home() {
   return (
     <section className='HomeSection'>
       <Helmet>
-        <title> Luis Thalys RX - Página Inicial </title>
-        <link rel="icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362799/portifolio.dev/icons8-casa-16_nutbqc.png" />
+        <title>Página Inicial</title>
+        <link rel="icon" href="https://www.svgrepo.com/show/501871/home-house.svg" />
       </Helmet>
       <div id='FigureDiv'>
         <figure className='animate__animated animate__fadeIn' id="perfFig">
@@ -69,6 +69,11 @@ function Home() {
           <a className={theme? 'iconDetails ExpressD' : 'iconDetails Express'} href='https://expressjs.com/pt-br/' target='_blank'>
             <SiExpress className='icon'/>
             <span>Express</span>
+          </a>
+
+          <a className={theme? 'iconDetails MongoD' : 'iconDetails Mongo'} href='https://www.mongodb.com/' target='_blank'>
+            <SiMongodb className='icon'/>
+            <span>MongoDB</span>
           </a>
         </div>          
 

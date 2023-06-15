@@ -30,10 +30,6 @@ function Projetos() {
   if(!carregou) {
     return(
       <>
-        <Helmet>
-          <title>Carregando Projetos</title>
-          <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362918/portifolio.dev/icons8-lista-de-ingredientes-16_a8j5ju.png" type="image/x-icon" />
-        </Helmet>
         <Navbar tema={theme}/>
         <section id='projectSection' className='text-center'>          
           <div>
@@ -48,8 +44,8 @@ function Projetos() {
   return (    
     <>
       <Helmet>
-        <title>Luis Thalys RX - Meus Projetos</title>
-        <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362918/portifolio.dev/icons8-lista-de-ingredientes-16_a8j5ju.png" type="image/x-icon" />
+        <title>Meus Projetos</title>
+        <link rel="shortcut icon" href="https://www.svgrepo.com/show/15389/tasks.svg" type="image/x-icon" />
       </Helmet>
 
       <Navbar tema={theme}/>
@@ -63,14 +59,14 @@ function Projetos() {
       <>
       <li key={index} className='animate__animated animate__fadeIn'>
           <ProjectCard
-            id={pj.id}
+            id={pj._id}
             nome={pj.nome}
             nomespace={pj.nomespace}
-            projectIMG={pj.projectIMG}                     
-            sobre={pj.sobre}
-            link={pj.link}
-            tipo={pj.tipo}
-            color={pj.cor}
+            projectIMG={pj.detalhes.projectIMG}                     
+            sobre={pj.detalhes.sobre}
+            link={pj.detalhes.link}
+            tipo={pj.detalhes.tipo}
+            color={pj.detalhes.cor}
             tema={theme}
           />          
       </li>
