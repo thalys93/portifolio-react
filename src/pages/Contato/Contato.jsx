@@ -8,6 +8,7 @@ import { ThemeContext } from '../../services/context/ThemeContext';
 
 // CSS
 import './contato.css'
+import { Helmet } from 'react-helmet';
 
 function Contato() {  
 
@@ -34,14 +35,16 @@ function Contato() {
   const [CiconTxt, setCiconTxt] = useState(true)
   const CMouseClickIconTxt = () => {setCiconTxt(!CiconTxt)}
 
-  document.title = 'Luis Thalys RX - Contato'
-  document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362903/portifolio.dev/icons8-telefone-16_kyuhcm.png';
-
   const { theme } = useContext(ThemeContext)
   
 
   return (
-    <section className='contactSection'>
+  <section className='contactSection'>
+
+    <Helmet>
+      <title>Luis Thalys RX - Contato</title>
+      <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682362903/portifolio.dev/icons8-telefone-16_kyuhcm.png" type="image/x-icon" />
+    </Helmet>
 
 <article className='contactArticle'>
       <div className='tituloDiv'>
