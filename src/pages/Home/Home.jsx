@@ -61,11 +61,6 @@ function Home() {
             <span>Node.js</span>          
           </a>
 
-          <a className={theme? 'iconDetails AdonisD' : 'iconDetails Adonis'} href='https://adonisjs.com/' target='_blank'>
-            <SiAdonisjs className='icon'/>
-            <span>Adonis.js</span>
-          </a>
-
           <a className={theme? 'iconDetails ExpressD' : 'iconDetails Express'} href='https://expressjs.com/pt-br/' target='_blank'>
             <SiExpress className='icon'/>
             <span>Express</span>
