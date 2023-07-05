@@ -1,7 +1,8 @@
 // Libs
 import React, { useContext } from 'react'
-import  { FaHtml5, FaCss3Alt, FaAngular, FaReact, FaNodeJs} from 'react-icons/fa';
-import { SiAdonisjs, SiExpress, SiJavascript, SiMongodb } from 'react-icons/si'
+import  { FaJava, FaHtml5, FaCss3Alt, FaAngular, FaReact, FaNodeJs} from 'react-icons/fa';
+import { SiMysql, SiCsharp, SiPhp, SiExpress, SiJavascript, SiMongodb,  } from 'react-icons/si'
+import { DiDotnet } from 'react-icons/di'
 import { Helmet } from 'react-helmet';
 import { ThemeContext } from '../../services/context/ThemeContext';
 
@@ -70,6 +71,31 @@ function Home() {
             <SiMongodb className='icon'/>
             <span>MongoDB</span>
           </a>
+
+          <a className={theme? 'iconDetails MySqlD' : 'iconDetails MySql'} href='https://www.mysql.com/' target='_blank'>
+            <SiMysql className='icon'/>
+            <span>My SQL</span>
+          </a>
+
+          <a className={theme? 'iconDetails PHPD' : 'iconDetails PHP'} href='https://www.php.net/' target='_blank'>
+            <SiPhp className='icon'/>
+            <span>PHP</span>
+          </a>
+
+          <a className={theme? 'iconDetails CSharpD' : 'iconDetails CSharp'} href='https://pt.wikipedia.org/wiki/C_Sharp' target='_blank'>
+            <SiCsharp className='icon'/>
+            <span>C#</span>
+          </a>
+
+          <a className={theme? 'iconDetails NetD' : 'iconDetails Net'} href='https://dotnet.microsoft.com/pt-br/' target='_blank'>
+            <DiDotnet className='icon'/>
+            <span>.NET</span>
+          </a>
+
+          <a className={theme? 'iconDetails JavaD' : 'iconDetails Java'} href='https://www.java.com/pt-BR/' target='_blank'>
+            <FaJava className='icon'/>
+            <span>Java</span>
+          </a>          
         </div>          
 
     </section>
