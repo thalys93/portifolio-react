@@ -1,9 +1,9 @@
 # Portifolio Em React
  - 🟦 Front End - React
  
- - 🟪 BackEnd - Node.js /Strapi
+ - 🟪 BackEnd - Node.js
  
- - 🟨 Banco de dados **PostGreeSQL**
+ - 🟨 Banco de dados **MongoDB**
  
  **Em fase de Produção (postado na internet) ** 
 
