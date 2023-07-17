@@ -6,7 +6,7 @@ import './sobre.css'
 import { Helmet } from 'react-helmet'
 
 // IMG
-let Me2 = "/img/me2.jpg"
+let Me2 = "/img/me2.png"
 
 function Sobre() {    
 
@@ -19,12 +19,12 @@ function Sobre() {
         <link rel="icon" href="https://www.svgrepo.com/show/490949/people.svg" />
       </Helmet>
 
-      <article className='imgArticle'>        
+      <article className='imgArticle user-select-none'>        
           <img src={Me2} className='photo'/>
       </article>
 
       <article className='container textArticle me-5'>      
-            <div className='TituloDiv text-center mb-3'>
+            <div className='TituloDiv mb-3'>              
               <h1 className='user-select-none'> Luis Thalys Rodrigues</h1>
               <span className={theme? 'text-dark user-select-none' : 'text-light-emphasis user-select-none'}> Quem Sou Eu?</span>
             </div>
@@ -35,13 +35,18 @@ function Sobre() {
          e Frameworks como : <b id='reactTxt'>React  </b> ,
         <b id='angularTxt'> Angular </b> </p>        
 
-         <p> Especialista em desenvolvimento de aplicações web responsivas e interativas
-         Como Desenvolvedor do Site de Receitas<b><a href='https://cade-meu-rango-front.web.app' target='_blank' className={theme? 'text-dark bold' : 'text-light bold'}> Cadê Meu Rango</a></b>, 
-         onde estou constantemente aprimorando         
-         a Plataforma e trabalhando no desenvolvimento de novos recursos. </p>
+         <p> Atualmente, estou trabalhando no projeto <b><a href='https://github.com/thalys93/gestao-e-lanche' target='_blank' className={theme? 'text-dark bold' : 'text-light bold'}> Gestão e Lanche </a></b>, 
+         um empreendimento em desenvolvimento com foco em auxiliar pequenos restaurantes. <br/>
+         Minha experiência nesse projeto envolve o desenvolvimento de aplicações web responsivas e interativas, 
+         buscando criar soluções eficazes para problemas complexos de desenvolvimento web. <br/> 
+         Estou empenhado em aprimorar constantemente a plataforma, 
+         além de trabalhar no desenvolvimento de novos recursos para melhorar a experiência dos usuários.
+         </p>
 
-         <p>Bem como Criando um portifólio para mostrar minhas habilidades e contribuições
-         para projetos Futuros. sou capaz de oferecer soluções criativas e eficazes para problemas complexos de desenvolvimento web. 
+         <p>Meu portfólio web destaca projetos diversos que demonstram minhas habilidades em desenvolvimento web,
+           buscando soluções personalizadas para desafios complexos. <br/>
+           Reflete minha experiência em design responsivo, UX, integração de APIs, front-end e back-end, 
+           sempre buscando aprender e aprimorar minhas habilidades para projetos inovadores em equipes colaborativas.
           </p>
           </div>
             

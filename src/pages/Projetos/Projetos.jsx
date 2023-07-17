@@ -32,10 +32,11 @@ function Projetos() {
       <>
         <Navbar tema={theme}/>
         <section id='projectSection' className='text-center'>          
-          <div>
-            <h3> Aguarde Carregando..</h3>
+          <div className='LoadingDiv container user-select-none'>
+            <h3> Aguarde Carregando Projetos ..</h3>
             <LoadingCircle/>
-            <span className='text-secondary animate__animated animate__fadeIn'> loading...</span>
+            <span className='text-secondary animate__animated animate__fadeIn'> Caso Esteja Demorando Muito Clique Abaixo ...</span>
+            <a className='text-info-emphasis pt-3' href='https://github.com/thalys93?tab=repositories'> Meus Projetos Github </a>
           </div>
         </section>
       </>

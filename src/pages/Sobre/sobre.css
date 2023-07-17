@@ -30,7 +30,8 @@
 
 @media only screen and (min-width: 768px) {
     .imgArticle{        
-        margin-left: 15pt;
+        padding-left: 3rem;
+        padding-top: 3rem;
     }
 
     .SobreSection{
@@ -66,8 +67,8 @@
 
 .photo{
     border: none;
-    border-radius: 20pt 20pt 30pt 30pt;
-    width: 200pt
+    border-radius: 2rem;    
+    width: 20rem
 }
 
 

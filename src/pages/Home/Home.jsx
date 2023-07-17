@@ -9,9 +9,6 @@ import { ThemeContext } from '../../services/context/ThemeContext';
 // CSS
 import './home.css'
 
-// IMG
-let PerfImg = '/img/me.jpg'
-
 function Home() {    
 
   const {theme} = useContext(ThemeContext)
@@ -24,7 +21,7 @@ function Home() {
       </Helmet>
       <div id='FigureDiv'>
         <figure className='animate__animated animate__fadeIn' id="perfFig">
-        <img src={PerfImg}/>
+        <img src='https://avatars.githubusercontent.com/u/102838847?s=400&u=1848d3262086831f934e0fddc76566dfcefd5f11&v=4/' />
           <div className='flex flex-row'>
             <figcaption className='AuthorName'> Luis Thalys RX <span className='text-secondary'>.dev</span></figcaption>            
           </div>

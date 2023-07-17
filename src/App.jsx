@@ -19,11 +19,11 @@ function App() {
 
 
   return (
-    <main className='overflow-hidden'>
+    <section className='overflow-hidden'>
         <Navbar tema={theme}/>
           <Outlet/>                                         
         <Footer tema={theme}/>      
-    </main>
+    </section>
 
     
   )

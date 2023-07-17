@@ -178,3 +178,9 @@
     
 }
 
+.LoadingDiv{
+    display: flex;
+    flex-direction: column;
+    padding-top: 15rem;
+}
+
