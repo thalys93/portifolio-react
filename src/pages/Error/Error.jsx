@@ -1,75 +1,46 @@
-// React +
-import React, { useEffect } from 'react'
-import { useState } from 'react'
-import { Link } from "react-router-dom"
-import { Toast, ToastContainer } from 'react-bootstrap'
+  // React +
 
-// CSS
+import { Helmet } from 'react-helmet'
+import Navbar from '../layout/navbar-component/Navbar.jsx'
+import { ThemeContext } from '../../services/context/ThemeContext';
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 import './error.css'
 
 
 
 function Error() {
-  document.title = 'Ops Algo deu Errado!'
-    document.head.querySelector('link[rel="icon"]').href = 'https://res.cloudinary.com/dh39ahmpj/image/upload/v1682364473/portifolio.dev/icons8-erro-16_dvxo8h.png'
 
-  const lordStyle = {
-    width:'120px',
-    height:'120px'
-}
+  const {theme} = useContext(ThemeContext);  
 
-const [mostrarError, setMostrarError] = useState(false)
-
-const toggleError  = () => setMostrarError(!mostrarError)
-
-useEffect(() => {
-  toggleError()
-}, [])
-
+    useEffect(() => {
+    if (theme) {
+      document.body.classList.add('lightBody')
+    } else {
+      document.body.classList.remove('lightBody')
+    }
+    }, [theme]);
 
   return (
-    <section className='sectionError'>   
-            <div id="error">
-                <h1> Ops!  </h1>
-                <h2> Algo deu Errado! </h2>  
-            <lord-icon
-                src="https://cdn.lordicon.com/sbiheqdr.json"
-                trigger="loop"
-                delay="1000"
-                colors="primary:#ffffff,secondary:#545454"
-                style={lordStyle}>
-            </lord-icon>  
-                <hr />
-                <h1 id="spanError"> Clique no Botão Abaixo para voltar </h1>      
-                <br/>
-                <div className='ButtonsError'>
-                <Link to="/">                
-                    <button id="errorbtn" className='btn btn-outline-light'>                        
-                        <i className="bi bi-door-open"/> 
-                        <p>Voltar Ao Inicio</p>
-                    </button>
-                </Link>      
-
-                    <button className='btn btn-outline-light' id='errorbtn' onClick={toggleError}>
-                      <i class="bi bi-bug"/>
-                        <p>Mostrar Error</p>                     
-                    </button> 
-                                       
-                </div>
-
-              <ToastContainer className='toastContainer' position='top-center'>
-                <Toast show={mostrarError} onClose={toggleError} className='bg-danger' delay={3500} autohide>
-                    <Toast.Body>
-                      <div className='text-center'>
-                      Erro 404: Página não encontrada! <br/>
-                      <b>Verifique sua URL</b>
-                      </div>
-                      </Toast.Body>
-                </Toast>
-              </ToastContainer>
-
-            </div>                         
-        </section>
+    <>    
+    <Helmet>
+      <title>Opa! Algo deu Errado </title>
+      <link rel="shortcut icon" href="https://res.cloudinary.com/dh39ahmpj/image/upload/v1682364473/portifolio.dev/icons8-erro-16_dvxo8h.png" type="image/x-icon" />
+    </Helmet>
+    <Navbar tema={theme}/>
+    <section className='container errorContainer user-select-none'>
+      <div className={theme? 'errorWhite p-3' : 'error p-3'}>
+        <h3> Ops! <br/> A Página que você está procurando não Existe!</h3>
+        <hr className={theme? 'lineColorD' : 'lineColor'}/>
+        <div className='text-center'>
+          <Link to='/' className={theme? 'btn btn-outline-dark' : 'btn btn-outline-light'}>
+            <h3 className='mt-2'> Deseja Retornar?</h3>
+          </Link>
+        </div>
+      </div>
+    </section>
+    </>
   )
 }
 

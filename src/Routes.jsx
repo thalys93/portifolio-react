@@ -5,29 +5,29 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // Import das Paginas
 
 // Import da App
-import App from './App'
+import App from './App.jsx'
 
 // Inicio
-import Home from './pages/Home/Home'
+import Home from './pages/Home/Home.jsx'
 
 // Página Sobre
-import Sobre from './pages/Sobre/Sobre'
+import Sobre from './pages/Sobre/Sobre.jsx'
 
 // Projetos e Projeto
-import Projetos from './pages/Projetos/Projetos'
-import Projeto from './pages/Projetos/Projeto'
+import Projetos from './pages/Projetos/Projetos.jsx'
+import Projeto from './pages/Projetos/Projeto.jsx'
 
 // Contato
-import Contato from './pages/Contato/Contato'
+import Contato from './pages/Contato/Contato.jsx'
 
 // Página de Error
-// import Error from './pages/Error/Error'
+import Error from './pages/Error/Error.jsx'
 
 const router = createBrowserRouter([
         {
             path: '/',
             element: <App/>,
-            // errorElement: <Error/>,
+            errorElement: <Error/>,
             children: [
                 // Inicio
                 {

@@ -7,32 +7,43 @@
     width: 100vw;
 }
 
-#error{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    
-    background-color: #2e2e2e;
-    
-    margin-top: 100pt;
-    margin-left: 350pt;  
-    margin-right: 350pt;
-    padding: 50pt;
-
+.error{
+    background-color: #2e2e2e;        
     color: aliceblue;
-    border-radius: 50pt;    
+    border-radius: 1rem;  
 
     animation: borderLight 3s infinite alternate;
 }
 
+.errorWhite{
+    background-color: #ffffff;
+    color: #2e2e2e;
+    border-radius: 1rem;
+
+    animation: borderLight 3s infinite alternate;
+}
+
+.errorContainer{
+    padding-top: 15rem;
+    width: 20rem;
+}
+
+.lineColor{
+    opacity: 1;
+    color: aliceblue;    
+}
+
+.lineColorD{
+    opacity: 1;
+    color: #2e2e2e;    
+}
+
 @keyframes borderLight {
     from {
-        border: 1pt solid #2e2e2e;        
+        border: 0.3rem solid #2e2e2e;        
     }
     to {
-        border: 1pt solid #8d3939;        
+        border: 0.3rem solid #8d3939;        
     }
     
 }
