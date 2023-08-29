@@ -35,7 +35,7 @@ function ProjectCard(props) {
               <span className={props.tema? 'text-center user-select-none text-dark' : 'text-center user-select-none'} style={{color: props.color}}> ({props.tipo}) </span>
             </div>
           </Card.Header>
-            <Image src={props.projectIMG} height={160} width={300}/>
+            <Image src={props.projectIMG} className='projectImage'/>
           <Card.Body> 
             <div className='text-center'>          
             <Link 

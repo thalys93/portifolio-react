@@ -31,7 +31,15 @@
     border-radius: 15pt;
     margin-bottom: 15pt;
     
+    
     user-select: none;
+}
+
+.projectImage{
+    height: 10rem;
+    width: 20rem;
+
+    object-fit: cover;
 }
 
 #projectLink{

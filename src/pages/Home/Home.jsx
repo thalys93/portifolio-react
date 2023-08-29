@@ -29,7 +29,8 @@ function Home() {
         <h2>Desenvolvedor Web </h2>         
       </div>          
         <div id="iconsDiv" className='iconDiv'> 
-          <a className={theme? 'iconDetails HtmlD' : 'iconDetails Html'} href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank'>
+
+          {/* <a className={theme? 'iconDetails HtmlD' : 'iconDetails Html'} href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target='_blank'>
             <FaHtml5 className="icon"/>
             <span>HTML</span>            
           </a>
@@ -42,7 +43,7 @@ function Home() {
           <a className={theme? 'iconDetails JavascriptD' : 'iconDetails Javascript'} href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">
           <SiJavascript className="icon"/>
           <span>Javascript</span>
-          </a>
+          </a> */}
 
           <a className={theme? 'iconDetails ReactD' : 'iconDetails React'} href="https://react.dev/" target="_blank">
           <FaReact className="icon"/>
@@ -59,10 +60,10 @@ function Home() {
             <span>Node.js</span>          
           </a>
 
-          <a className={theme? 'iconDetails ExpressD' : 'iconDetails Express'} href='https://expressjs.com/pt-br/' target='_blank'>
+          {/* <a className={theme? 'iconDetails ExpressD' : 'iconDetails Express'} href='https://expressjs.com/pt-br/' target='_blank'>
             <SiExpress className='icon'/>
             <span>Express</span>
-          </a>
+          </a> */}
 
           <a className={theme? 'iconDetails MongoD' : 'iconDetails Mongo'} href='https://www.mongodb.com/' target='_blank'>
             <SiMongodb className='icon'/>
@@ -74,10 +75,10 @@ function Home() {
             <span>My SQL</span>
           </a>
 
-          <a className={theme? 'iconDetails PHPD' : 'iconDetails PHP'} href='https://www.php.net/' target='_blank'>
+          {/* <a className={theme? 'iconDetails PHPD' : 'iconDetails PHP'} href='https://www.php.net/' target='_blank'>
             <SiPhp className='icon'/>
             <span>PHP</span>
-          </a>
+          </a> */}
 
           <a className={theme? 'iconDetails CSharpD' : 'iconDetails CSharp'} href='https://pt.wikipedia.org/wiki/C_Sharp' target='_blank'>
             <SiCsharp className='icon'/>

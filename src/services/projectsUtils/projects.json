@@ -1,0 +1,80 @@
+[
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1682300440/portifolio_09bceec19f.png",
+            "tipo": "Portifólio",
+            "sobre": "Meu Segundo Portifólio usando o React como framework e usando técnicas e responsividade e cleanCode.\nMais Optimizado, Responsivo, Minimalista e Bonito. ",
+            "link": "https://github.com/thalys93/portifolio-react",
+            "cor": "cyan"
+        },
+        "_id": "648b4db501fa464a9462c6b0",
+        "nome": "Portifólio em React",
+        "nomespace": "portifolio-react",
+        "__v": 0
+    },
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1682300187/dabruatelie_1b730933fc.png",
+            "tipo": "Comercial",
+            "sobre": "Dabru Ateliê é um Ecommerce de produtos artesanais baseado em fios de malha e derivados.\nAtualmente o site, está em pausado do desenvolvimento.",
+            "link": "https://github.com/thalys93/dabruatelie",
+            "cor": "chartreuse"
+        },
+        "_id": "648b4ed801fa464a9462c6b2",
+        "nome": "Dabru Ateliê",
+        "nomespace": "Dabruatelie",
+        "__v": 0
+    },
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1684280950/Cad%C3%AA%20Meu%20Rango/thumb_do_site_knjbzn.png",
+            "tipo": "Curso",
+            "sobre": "Cade meu rango é uma aplicação SPA (single page aplication) que permite aos usuários encontrar receitas e dicas culinárias de acordo com seus interesses e preferências.",
+            "link": "https://github.com/thalys93/CadeMeuRango-FrontEnd",
+            "cor": "yellow"
+        },
+        "_id": "648b4efe01fa464a9462c6b4",
+        "nome": "Cadê Meu Rango",
+        "nomespace": "cademeurango",
+        "__v": 0
+    },
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1682226731/nacio_eafe15ca46.png",
+            "tipo": "Experimental",
+            "sobre": "O Testador de Nacionalidade é uma aplicação de teste inovadora que foi desenvolvida para ajudar a verificar a nacionalidade de uma pessoa. Através do uso do método if else, a aplicação pode verificar se a pessoa é estrangeira ou não, com base em informações fornecidas pelo usuário.",
+            "link": "https://github.com/thalys93/Testador-De-Nacionalidade",
+            "cor": "red"
+        },
+        "_id": "648b4fc9f9fac6cfc49e1fe3",
+        "nome": "Testador de Nacionalidade",
+        "nomespace": "nacionalidadeTester",
+        "__v": 0
+    },
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1682226730/pcmb_2e65d00351.png",
+            "tipo": "Curso",
+            "sobre": "O Projeto Cadê Meu Banzo é uma aplicação web inovadora que visa melhorar a experiência dos usuários do transporte público nas cidades de Porto Alegre e Alvorada.",
+            "link": "https://github.com/thalys93/pcmb",
+            "cor": "orange"
+        },
+        "_id": "648b4fdaf9fac6cfc49e1fe5",
+        "nome": "Cadê Meu Banzo",
+        "nomespace": "cademeuBanzo",
+        "__v": 0
+    },
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1689609169/portifolio.dev/Login_zpsg0v.png",
+            "tipo": "Gerenciamento",
+            "sobre": "O Projeto Gestão e Lanche, é uma aplicação de gerenciamento de pequenos restaurantes e deliverys, com um backend em java(spring boot), e um front end em React, o projeto visa ajudar no gerenciamento de comandas, estoque, financeiro, funcionários, de um pequeno restaurante ou delivery",
+            "link": "https://github.com/thalys93/gestao-e-lanche",
+            "cor": "olive"
+        },
+        "_id": "64b56442b693db6382fdf68a",
+        "nome": "Gestão e Lanche",
+        "nomespace": "gestão-lanche",
+        "__v": 0
+    }
+]

@@ -1,5 +1,6 @@
 import {useState, useEffect} from 'react'
-import { apiProjects } from '../api';
+// import { apiProjects } from '../api';
+import apiLocal from './projects.json'
 
 export function ProjectUtils() {
         
@@ -11,9 +12,11 @@ export function ProjectUtils() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await apiProjects();
-                setDados(response);
-                setCarregou(true);
+                // const response = await apiProjects();
+                setDados(apiLocal);
+                setTimeout(() => {                    
+                    setCarregou(true);
+                }, 1500);
             } catch (error) {
                 console.log(error);
             }
