@@ -14,6 +14,32 @@
     },
     {
         "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1697508822/vida-sustentavel/siteThumb_ywvzqy.png",
+            "tipo": "Landing Page",
+            "sobre": "No Vida Sustentável, nossa missão é clara e inspiradora: capacitar indivíduos e comunidades a adotar estilos de vida sustentáveis, contribuindo para um mundo mais saudável, equilibrado e vibrante. Acreditamos que todos têm um papel fundamental na construção de um futuro mais sustentável, e juntos podemos fazer a diferença. Junte-se a nós nessa jornada em prol do nosso planeta. ",
+            "link": "https://vida-sustentavel-61c19.web.app/",
+            "cor": "blue"
+        },
+        "_id": "648b4db501fa464a9462c6b0",
+        "nome": "Vida Sustentável",
+        "nomespace": "vida-sustentavel",
+        "__v": 0
+    },
+    {
+        "detalhes": {
+            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1684280950/Cad%C3%AA%20Meu%20Rango/thumb_do_site_knjbzn.png",
+            "tipo": "Curso",
+            "sobre": "Cade meu rango é uma aplicação SPA (single page aplication) que permite aos usuários encontrar receitas e dicas culinárias de acordo com seus interesses e preferências.",
+            "link": "https://cade-meu-rango-front.web.app/",
+            "cor": "yellow"
+        },
+        "_id": "648b4efe01fa464a9462c6b4",
+        "nome": "Cadê Meu Rango",
+        "nomespace": "cademeurango",
+        "__v": 0
+    },
+    {
+        "detalhes": {
             "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1682300187/dabruatelie_1b730933fc.png",
             "tipo": "Comercial",
             "sobre": "Dabru Ateliê é um Ecommerce de produtos artesanais baseado em fios de malha e derivados.\nAtualmente o site, está em pausado do desenvolvimento.",
@@ -23,19 +49,6 @@
         "_id": "648b4ed801fa464a9462c6b2",
         "nome": "Dabru Ateliê",
         "nomespace": "Dabruatelie",
-        "__v": 0
-    },
-    {
-        "detalhes": {
-            "projectIMG": "https://res.cloudinary.com/dh39ahmpj/image/upload/v1684280950/Cad%C3%AA%20Meu%20Rango/thumb_do_site_knjbzn.png",
-            "tipo": "Curso",
-            "sobre": "Cade meu rango é uma aplicação SPA (single page aplication) que permite aos usuários encontrar receitas e dicas culinárias de acordo com seus interesses e preferências.",
-            "link": "https://github.com/thalys93/CadeMeuRango-FrontEnd",
-            "cor": "yellow"
-        },
-        "_id": "648b4efe01fa464a9462c6b4",
-        "nome": "Cadê Meu Rango",
-        "nomespace": "cademeurango",
         "__v": 0
     },
     {
